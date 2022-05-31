@@ -1,2 +1,2 @@
-# GameProg-2
+# GameProg-3
 Work in Progress Finals
