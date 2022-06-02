@@ -36,7 +36,7 @@ public class SlingshotMovement : MonoBehaviour
       LineRender();
    }
 
-   public void CheckForBall()
+   public void CheckForBall() //returns the tag of the projectile
    {
       if (_hit.collider != null)
       {
@@ -48,7 +48,7 @@ public class SlingshotMovement : MonoBehaviour
       }
    }
 
-   public void CheckForBallDrag()
+   public void CheckForBallDrag()//drags the projectile while in the slingshot
    {
       if (_temporaryTag == "BallTag")
       {
@@ -67,7 +67,7 @@ public class SlingshotMovement : MonoBehaviour
       }
    }
 
-   public void CheckForBallRelease()
+   public void CheckForBallRelease()//releases the projectile
    {
       if (_temporaryTag == "BallTag")
       {
@@ -79,14 +79,14 @@ public class SlingshotMovement : MonoBehaviour
       }
    }
    
-   private IEnumerator Release()
+   private IEnumerator Release()//delay for projectile release
    {
       yield return new WaitForSeconds(_releaseDelay);
       _springJ.enabled = false;
    }
    
 
-   private void HandleRaycast()
+   private void HandleRaycast()// handles the raycast and converts the mouse position
    {
       Vector2 mousePos = Input.mousePosition;
       if (Camera.main != null)
@@ -99,7 +99,7 @@ public class SlingshotMovement : MonoBehaviour
       }
    }
    
-   private void LineRender()
+   private void LineRender()//renders the sling line
    {
       _line.SetPosition(0, _rigidB.position);
       _line.SetPosition(1, _slingRb.position);

@@ -12,6 +12,7 @@ public class ProjectileSpawner : MonoBehaviour
 
     private void Update()
     {
+        //instantiates a ball and gives it origin if ball is destroyed
         if (activeBall) return;
         activeBall = Instantiate(ballPrefab, origin.position, origin.rotation );
         activeBall.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;

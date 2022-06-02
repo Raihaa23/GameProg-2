@@ -16,15 +16,15 @@ public class SlingshotInputHandler : MonoBehaviour
         MouseInputUp = CheckMouseInputUp();
     }
 
-    private bool CheckMouseInputDown()
+    private bool CheckMouseInputDown()//returns input upon button click
     {
         return Input.GetMouseButtonDown(0);
     }
-    private bool CheckMouseInput()
+    private bool CheckMouseInput()//returns input while holding the button
     {
         return Input.GetMouseButton(0);
     }
-    private bool CheckMouseInputUp()
+    private bool CheckMouseInputUp()//returns input upon button release
     {
         return Input.GetMouseButtonUp(0);
     }

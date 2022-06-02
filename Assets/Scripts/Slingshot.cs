@@ -10,9 +10,8 @@ public class Slingshot : MonoBehaviour
         HandleShot();
     }
 
-    private void HandleShot()
+    private void HandleShot()//Checks for mouse inputs
     {
-        // Check for mouse input
         if (inputHandler.MouseInputDown)
         {
            movement.CheckForBall();
@@ -28,12 +27,12 @@ public class Slingshot : MonoBehaviour
             movement.CheckForBallRelease();
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)// projectile collision
     {
         StartCoroutine(DestroyBall());
     }
     
-    private IEnumerator DestroyBall()
+    private IEnumerator DestroyBall()//destroys projectile
     {
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
