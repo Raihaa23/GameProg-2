@@ -24,12 +24,7 @@ public class PlayerTurnManager : MonoBehaviour
     #endregion
 
     public string playerInTurnName;
-
-    private void Start()
-    {
-        
-    }
-
+    
     public void EndTurn()
     {
         if (playerInTurnName == "Player1Ball")
