@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Player2Data
   m_EditorClassIdentifier: 
   playerName: Player2Ball
+  enemyNpc: Player1NPC

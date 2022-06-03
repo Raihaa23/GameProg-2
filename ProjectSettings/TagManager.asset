@@ -8,6 +8,9 @@ TagManager:
   - Player2Ball
   - Player1
   - Player2
+  - Wall
+  - Player1NPC
+  - Player2NPC
   layers:
   - Default
   - TransparentFX
