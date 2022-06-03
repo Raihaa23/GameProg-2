@@ -40,7 +40,7 @@ public class SlingshotMovement : MonoBehaviour
    {
       if (_hit.collider != null)
       {
-         if (_hit.collider.gameObject.CompareTag("Player1Ball") && _isDraggable)
+         if (_hit.collider.gameObject.CompareTag(PlayerTurnManager.Instance.playerInTurnName) && _isDraggable)
          {
             _temporaryTag = "BallTag";
             _rigidB.isKinematic = true;
