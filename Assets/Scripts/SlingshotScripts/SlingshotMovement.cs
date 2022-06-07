@@ -1,4 +1,5 @@
 using System.Collections;
+using Data;
 using ManagersScripts;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace SlingshotScripts
 {
    public class SlingshotMovement : MonoBehaviour
    {
+      [SerializeField] private PlayerData playerData;
+      
       private RaycastHit2D _hit;
       private LineRenderer _line;
       private Vector2 _worldPosition;
@@ -43,7 +46,7 @@ namespace SlingshotScripts
       {
          if (_hit.collider != null)
          {
-            if (_hit.collider.gameObject.CompareTag(PlayerTurnManager.Instance.playerInTurnName) && _isDraggable)
+            if (_hit.collider.gameObject.CompareTag(playerData.equippedAmmo) && _isDraggable)
             {
                _temporaryTag = "BallTag";
                _rigidB.isKinematic = true;

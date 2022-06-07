@@ -70,3 +70,4 @@ MonoBehaviour:
   ballPrefab: {fileID: 456274950639437004, guid: c81c9173244550549a1a0f15d170bd29, type: 3}
   origin: {fileID: 4724590168662097305}
   originRigidBody2D: {fileID: 4724590168662097307}
+  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}

@@ -10,16 +10,17 @@ namespace SlingshotScripts
     {
         [SerializeField] private SlingshotInputHandler inputHandler;
         [SerializeField] private SlingshotMovement movement;
-        [SerializeField] private PlayerData _playerData;
+        [SerializeField] private PlayerData playerData;
 
         private void Update()
         {
+            Debug.Log(playerData.equippedAmmo);
             HandleShot();
         }
 
         private void HandleShot() //Checks for mouse inputs
         {
-            if (_playerData.playerName != PlayerTurnManager.Instance.playerInTurnName) return;
+            if (playerData.playerName != PlayerTurnManager.Instance.playerInTurnName) return;
             if (inputHandler.MouseInputDown)
             {
                 movement.CheckForBall();
@@ -38,7 +39,7 @@ namespace SlingshotScripts
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
             var enemyGameObj = other.gameObject;
-            if (other.gameObject.CompareTag(_playerData.enemyNpc))
+            if (other.gameObject.CompareTag(playerData.enemyNpc))
             {
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
                 enemyScript?.Damage(50);
@@ -49,6 +50,7 @@ namespace SlingshotScripts
         private IEnumerator DestroyBall() //destroys projectile
         {
             yield return new WaitForSeconds(2);
+            playerData.equippedAmmo = null;
             PlayerTurnManager.Instance.EndTurn();
             Destroy(gameObject);
         }

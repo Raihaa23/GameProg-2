@@ -28,26 +28,26 @@ namespace ManagersScripts
     
         public void EndTurn() // Ends player turn after projectile is destroyed
         {
-            if (playerInTurnName == "Player1Ball")
+            if (playerInTurnName == "Player1")
             {
-                playerInTurnName = "Player2Ball";
+                playerInTurnName = "Player2";
             }
         
-            else if (playerInTurnName == "Player2Ball")
+            else if (playerInTurnName == "Player2")
             {
-                playerInTurnName = "Player1Ball";
+                playerInTurnName = "Player1";
             }
         }
 
         public void StartWithPlayer1() // Starts the game with Player 1's turn 
         {
-            playerInTurnName = "Player1Ball";
+            playerInTurnName = "Player1";
             SceneManager.LoadScene("Stage 1");
         }
     
         public void StartWithPlayer2() // Starts the game with Player 2's turn 
         {
-            playerInTurnName = "Player2Ball";
+            playerInTurnName = "Player2";
             SceneManager.LoadScene("Stage 1");
         }
     }

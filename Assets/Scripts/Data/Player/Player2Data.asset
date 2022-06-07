@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a33905142fc46c3908675e1ee939fb3, type: 3}
   m_Name: Player2Data
   m_EditorClassIdentifier: 
-  playerName: Player2Ball
+  playerName: Player2
   enemyNpc: Player1NPC
+  equippedAmmo: 

@@ -7,5 +7,6 @@ namespace Data
     {
         public string playerName;
         public string enemyNpc;
+        public string equippedAmmo;
     }
 }
