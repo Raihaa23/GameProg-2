@@ -11,6 +11,8 @@ TagManager:
   - Wall
   - Player1NPC
   - Player2NPC
+  - Player1Destructible
+  - Player2Destructible
   layers:
   - Default
   - TransparentFX

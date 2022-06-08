@@ -1,6 +1,8 @@
+using System;
 using Data;
 using ManagersScripts;
 using UnityEngine;
+using Events;
 
 namespace SlingshotScripts
 {
@@ -11,22 +13,32 @@ namespace SlingshotScripts
         [SerializeField] private Transform origin;
         [SerializeField] private Rigidbody2D originRigidBody2D;
         [SerializeField] private PlayerData playerData;
-    
+        
 
-        private void Update()
+        private void Start()
         {
-            if (playerData.playerName == PlayerTurnManager.Instance.playerInTurnName)
-            {
-                LoadAmmo();
-            }
+            LoadAmmo();
         }
 
         private void LoadAmmo() //instantiates a ball and sets its origin if ball is destroyed
         {
-            if (activeBall) return;
-            activeBall = Instantiate(ballPrefab, origin.position, origin.rotation );
-            activeBall.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;
-            playerData.equippedAmmo = activeBall.tag;
+            if (playerData.playerName == PlayerTurnManager.Instance.playerInTurnName)
+            {
+                if (activeBall) return;
+                activeBall = Instantiate(ballPrefab, origin.position, origin.rotation);
+                activeBall.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;
+                playerData.equippedAmmo = activeBall.tag;
+            }
+        }
+        
+        private void OnEnable()
+        {
+            GameEvents.OnLoadAmmo += LoadAmmo;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.OnLoadAmmo -= LoadAmmo;
         }
     }
 }

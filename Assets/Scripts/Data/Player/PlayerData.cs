@@ -6,7 +6,11 @@ namespace Data
     public class PlayerData : ScriptableObject
     {
         public string playerName;
-        public string enemyNpc;
+        public string enemyDestructible;
         public string equippedAmmo;
+
+        public float totalIntegrity;
+        public float currentIntegrity;
+        
     }
 }

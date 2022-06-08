@@ -14,7 +14,6 @@ namespace SlingshotScripts
 
         private void Update()
         {
-            Debug.Log(playerData.equippedAmmo);
             HandleShot();
         }
 
@@ -39,7 +38,7 @@ namespace SlingshotScripts
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
             var enemyGameObj = other.gameObject;
-            if (other.gameObject.CompareTag(playerData.enemyNpc))
+            if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
                 enemyScript?.Damage(50);

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Player1Data
   m_EditorClassIdentifier: 
   playerName: Player1
-  enemyNpc: Player2NPC
+  enemyDestructible: Player2Destructible
   equippedAmmo: 
+  totalIntegrity: 0
+  currentIntegrity: 0
