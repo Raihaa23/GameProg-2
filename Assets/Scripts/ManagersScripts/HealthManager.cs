@@ -22,7 +22,7 @@ namespace ManagersScripts
         {
             _integrityInPercent = playerData.currentIntegrity / playerData.totalIntegrity;
             _integrityInPercent *= 100f;
-            textDisplay.text = _integrityInPercent.ToString(CultureInfo.InvariantCulture);
+            textDisplay.text = _integrityInPercent.ToString("f2");
         }
     }
 }
