@@ -1,10 +1,8 @@
-using System;
 using Data;
-using ManagersScripts;
-using UnityEngine;
 using Events;
+using UnityEngine;
 
-namespace SlingshotScripts
+namespace ManagersScripts
 {
     public class AmmoManager : MonoBehaviour
     {

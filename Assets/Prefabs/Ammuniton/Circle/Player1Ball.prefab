@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: -2952479488888705117}
   - component: {fileID: 453141831238626774}
   m_Layer: 0
-  m_Name: 'Player2Ball '
-  m_TagString: Player2Ball
+  m_Name: Player1Ball
+  m_TagString: Player1Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 3
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 7d6c1f204291fb2439d4979343a5b0d4, type: 2}
   m_Interpolate: 0
@@ -144,7 +144,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.54418325
+  m_Distance: 0.03830401
   m_DampingRatio: 0
   m_Frequency: 1.5
 --- !u!114 &456274950639437002
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputHandler: {fileID: -2952479488888705117}
   movement: {fileID: 453141831238626774}
-  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
 --- !u!114 &-2952479488888705117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,5 +186,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e2e2b928228b446b3cfbbb3e6dc96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
   maxDragDistance: 2

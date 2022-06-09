@@ -1,8 +1,8 @@
-using System.Collections;
 using Data;
 using ManagersScripts;
 using UnityEngine;
 using Interfaces;
+using Events;
 
 namespace SlingshotScripts
 {
@@ -11,9 +11,9 @@ namespace SlingshotScripts
         [SerializeField] private SlingshotInputHandler inputHandler;
         [SerializeField] private SlingshotMovement movement;
         [SerializeField] private PlayerData playerData;
-
         private void Update()
         {
+            CheckForBallReleaseAndRest();
             HandleShot();
         }
 
@@ -37,23 +37,38 @@ namespace SlingshotScripts
         }
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
-            var enemyGameObj = other.gameObject;
             if (PlayerTurnManager.Instance.isProjectileReleased != true) return;
+            var enemyGameObj = other.gameObject;
             if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
                 enemyScript?.Damage(50);
             }
-            StartCoroutine(DestroyBall());
-
         }
-    
-        private IEnumerator DestroyBall() //destroys projectile
+
+        private void CheckForBallReleaseAndRest() // Checks if the ball is release and rested to end turn
         {
-            yield return new WaitForSeconds(2);
+            if (movement.BallIsSleeping() && PlayerTurnManager.Instance.isProjectileReleased)
+            {
+                GameEvents.OnDestroyBallMethod();
+            }
+        }
+
+        private void DestroyBall() //destroys projectile 
+        {
             playerData.equippedAmmo = null;
             PlayerTurnManager.Instance.EndTurn();
             Destroy(gameObject);
+        }
+        
+        private void OnEnable()
+        {
+            GameEvents.OnDestroyBall += DestroyBall;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.OnDestroyBall -= DestroyBall;
         }
     }
 }

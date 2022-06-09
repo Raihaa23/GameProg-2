@@ -129,7 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
-  textDisplay: {fileID: 0}
+  textDisplay: {fileID: 3862425932573729171, guid: af7dd1d83377bae4d85112d3aa73f4a7, type: 3}
+  slider: {fileID: 4465529810744205822, guid: 85ab7ca9f87e54648988397362e3403e, type: 3}
 --- !u!1 &565314861559516991
 GameObject:
   m_ObjectHideFlags: 0

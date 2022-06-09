@@ -1,5 +1,6 @@
 using System.Collections;
 using Data;
+using Events;
 using ManagersScripts;
 using UnityEngine;
 
@@ -75,6 +76,12 @@ namespace SlingshotScripts
          StartCoroutine(Release());
          _isDraggable = false;
          PlayerTurnManager.Instance.isProjectileReleased = true;
+         GameEvents.OnPauseTurnTimerMethod();
+      }
+
+      public bool BallIsSleeping()// returns true if projectile is not moving anymore
+      {
+         return _rigidB.IsSleeping();
       }
    
       private IEnumerator Release() //delay for projectile release
