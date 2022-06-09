@@ -42,8 +42,13 @@ namespace SlingshotScripts
             {
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
                 enemyScript?.Damage(50);
+                StartCoroutine(DestroyBall());
             }
-            StartCoroutine(DestroyBall());
+            else if (other.gameObject.CompareTag($"Platform"))
+            {
+                StartCoroutine(DestroyBall());
+            }
+            
         }
     
         private IEnumerator DestroyBall() //destroys projectile

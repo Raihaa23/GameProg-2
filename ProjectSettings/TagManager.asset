@@ -13,6 +13,7 @@ TagManager:
   - Player2NPC
   - Player1Destructible
   - Player2Destructible
+  - Platform
   layers:
   - Default
   - TransparentFX
