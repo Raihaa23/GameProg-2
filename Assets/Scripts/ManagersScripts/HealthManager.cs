@@ -3,6 +3,7 @@ using System.Globalization;
 using Data;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ManagersScripts
 {
@@ -12,6 +13,7 @@ namespace ManagersScripts
         [SerializeField] private TextMeshProUGUI textDisplay;
         
         private float _integrityInPercent;
+        [SerializeField] private Slider slider;
 
         private void Update()
         {
@@ -22,7 +24,8 @@ namespace ManagersScripts
         {
             _integrityInPercent = playerData.currentIntegrity / playerData.totalIntegrity;
             _integrityInPercent *= 100f;
-            textDisplay.text = _integrityInPercent.ToString("f2");
+            slider.value = _integrityInPercent;
+            textDisplay.text = _integrityInPercent.ToString("f2") + "%";
         }
     }
 }
