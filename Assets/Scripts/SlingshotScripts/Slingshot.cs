@@ -38,17 +38,14 @@ namespace SlingshotScripts
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
             var enemyGameObj = other.gameObject;
+            if (PlayerTurnManager.Instance.isProjectileReleased != true) return;
             if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
                 enemyScript?.Damage(50);
-                StartCoroutine(DestroyBall());
             }
-            else if (other.gameObject.CompareTag($"Platform"))
-            {
-                StartCoroutine(DestroyBall());
-            }
-            
+            StartCoroutine(DestroyBall());
+
         }
     
         private IEnumerator DestroyBall() //destroys projectile

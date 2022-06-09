@@ -44,45 +44,37 @@ namespace SlingshotScripts
 
       public void CheckForBall() //returns the tag of the projectile
       {
-         if (_hit.collider != null)
-         {
-            if (_hit.collider.gameObject.CompareTag(playerData.equippedAmmo) && _isDraggable)
-            {
-               _temporaryTag = "BallTag";
-               _rigidB.isKinematic = true;
-            }
-         }
+         if (_hit.collider == null) return;
+         if (!_hit.collider.gameObject.CompareTag(playerData.equippedAmmo) || !_isDraggable) return;
+         _temporaryTag = "BallTag";
+         _rigidB.isKinematic = true;
       }
 
       public void CheckForBallDrag() //drags the projectile while in the slingshot
       {
-         if (_temporaryTag == "BallTag")
+         if (_temporaryTag != "BallTag") return;
+         _line.enabled = true;
+         if (_mouseToSlingDistance > maxDragDistance)
          {
-            _line.enabled = true;
-            if (_mouseToSlingDistance > maxDragDistance)
-            {
-               var position = _slingRb.position;
-               Vector2 direction = (_worldPosition - position).normalized;
-               _rigidB.position = position + direction * maxDragDistance;
-            }
-            else
-            {
-               _rigidB.position = _worldPosition;
-            }
-
+            var position = _slingRb.position;
+            Vector2 direction = (_worldPosition - position).normalized;
+            _rigidB.position = position + direction * maxDragDistance;
+         }
+         else
+         {
+            _rigidB.position = _worldPosition;
          }
       }
 
       public void CheckForBallRelease() //releases the projectile
       {
-         if (_temporaryTag == "BallTag")
-         {
-            _line.enabled = false;
-            _temporaryTag = null;
-            _rigidB.isKinematic = false;
-            StartCoroutine(Release());
-            _isDraggable = false;
-         }
+         if (_temporaryTag != "BallTag") return;
+         _line.enabled = false;
+         _temporaryTag = null;
+         _rigidB.isKinematic = false;
+         StartCoroutine(Release());
+         _isDraggable = false;
+         PlayerTurnManager.Instance.isProjectileReleased = true;
       }
    
       private IEnumerator Release() //delay for projectile release
@@ -95,14 +87,12 @@ namespace SlingshotScripts
       private void HandleRaycast() // handles the raycast and converts the mouse position
       {
          Vector2 mousePos = Input.mousePosition;
-         if (Camera.main != null)
-         {
-            _worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-            _mouseToSlingDistance = Vector2.Distance(_worldPosition, _slingRb.position);
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            // Casts the ray and get the first game object hit
-            _hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
-         }
+         if (Camera.main == null) return;
+         _worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+         _mouseToSlingDistance = Vector2.Distance(_worldPosition, _slingRb.position);
+         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+         // Casts the ray and get the first game object hit
+         _hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
       }
    
       private void LineRender() //renders the slingshot line

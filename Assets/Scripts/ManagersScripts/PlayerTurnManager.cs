@@ -35,6 +35,8 @@ namespace ManagersScripts
 
         [SerializeField] private string nextStage;
 
+        public bool isProjectileReleased;
+
         private void Start()
         {
          ResetPlayerData();   

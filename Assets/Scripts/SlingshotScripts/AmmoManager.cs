@@ -22,13 +22,12 @@ namespace SlingshotScripts
 
         private void LoadAmmo() //instantiates a ball and sets its origin if ball is destroyed
         {
-            if (playerData.playerName == PlayerTurnManager.Instance.playerInTurnName)
-            {
-                if (activeBall) return;
-                activeBall = Instantiate(ballPrefab, origin.position, origin.rotation);
-                activeBall.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;
-                playerData.equippedAmmo = activeBall.tag;
-            }
+            if (playerData.playerName != PlayerTurnManager.Instance.playerInTurnName) return;
+            if (activeBall) return;
+            activeBall = Instantiate(ballPrefab, origin.position, origin.rotation);
+            activeBall.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;
+            playerData.equippedAmmo = activeBall.tag;
+            PlayerTurnManager.Instance.isProjectileReleased = false;
         }
         
         private void OnEnable()
