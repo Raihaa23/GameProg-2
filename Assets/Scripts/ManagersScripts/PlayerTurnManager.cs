@@ -54,14 +54,20 @@ namespace ManagersScripts
         {
             GameEvents.OnVictoryMethod();
             GameEvents.OnResetTurnTimerMethod();
+
             if (playerInTurnName == "Player1")
             {
                 playerInTurnName = "Player2";
+                
+                
             }
             else if (playerInTurnName == "Player2")
             {
                 playerInTurnName = "Player1";
+                
+                
             }
+            GameEvents.OnToggleCameraMethod();
             GameEvents.OnLoadAmmoMethod();
         }
         

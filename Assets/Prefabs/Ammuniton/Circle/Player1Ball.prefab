@@ -109,7 +109,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 7d6c1f204291fb2439d4979343a5b0d4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &456274950639437000
 CircleCollider2D:
@@ -146,7 +146,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.03830401
   m_DampingRatio: 0
-  m_Frequency: 1.5
+  m_Frequency: 3.5
 --- !u!114 &456274950639437002
 MonoBehaviour:
   m_ObjectHideFlags: 0

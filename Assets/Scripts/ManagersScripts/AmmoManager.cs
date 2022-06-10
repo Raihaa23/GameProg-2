@@ -1,3 +1,4 @@
+using System;
 using Data;
 using Events;
 using UnityEngine;
@@ -12,13 +13,19 @@ namespace ManagersScripts
         [SerializeField] private Rigidbody2D originRigidBody2D;
         [SerializeField] private PlayerData playerData;
         
+        
 
         private void Start()
         {
             LoadAmmo();
         }
 
-        private void LoadAmmo() //instantiates a ball and sets its origin if ball is destroyed
+        private void Update()
+        {
+            
+        }
+
+        private void LoadAmmo() //instantiates a ball and sets its origin
         {
             if (playerData.playerName != PlayerTurnManager.Instance.playerInTurnName) return;
             if (activeBall) return;
