@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player1Ball
+  - Player2Ball
+  - Player1
+  - Player2
+  - Wall
+  - Player1NPC
+  - Player2NPC
+  - Player1Destructible
+  - Player2Destructible
+  - Platform
   layers:
   - Default
   - TransparentFX
