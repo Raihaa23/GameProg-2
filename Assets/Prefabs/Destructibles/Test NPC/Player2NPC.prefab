@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6262526205048492385}
   - component: {fileID: 5424500220627780978}
   - component: {fileID: 5748434849918942474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player2NPC
   m_TagString: Player2Destructible
   m_Icon: {fileID: 0}
