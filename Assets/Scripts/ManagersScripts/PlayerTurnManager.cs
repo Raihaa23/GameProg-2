@@ -27,6 +27,7 @@ namespace ManagersScripts
         #endregion
 
         public string playerInTurnName;
+        public string winner;
 
         [SerializeField] private PlayerData player1Data;
         [SerializeField] private PlayerData player2Data;
@@ -41,6 +42,7 @@ namespace ManagersScripts
         public void ResetPlayerData() // Resets the Players' data
         {
             Time.timeScale = 1;
+            winner = null;
             player1Data.currentIntegrity = 0;
             player1Data.equippedAmmo = null;
             player1Data.totalIntegrity = 0;

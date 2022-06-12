@@ -8,8 +8,8 @@ namespace ManagersScripts
     public class CameraManager : MonoBehaviour
     {
         [SerializeField] private CinemachineVirtualCamera cvCamera;
-        [SerializeField] private Transform player1Origin;
-        [SerializeField] private Transform player2Origin;
+        [SerializeField] private Transform player1Base;
+        [SerializeField] private Transform player2Base;
 
         private void Start()
         {
@@ -25,11 +25,11 @@ namespace ManagersScripts
         {
             if (PlayerTurnManager.Instance.playerInTurnName == "Player1")
             {
-                cvCamera.Follow = player1Origin;
+                cvCamera.Follow = player1Base;
             }
             else if (PlayerTurnManager.Instance.playerInTurnName == "Player2")
             {
-                cvCamera.Follow = player2Origin;
+                cvCamera.Follow = player2Base;
             }
         }
         private void SetCamera(GameObject projectile)
