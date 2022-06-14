@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 456274950639437002}
   - component: {fileID: -2952479488888705117}
   - component: {fileID: 453141831238626774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player1Ball
   m_TagString: Player1Ball
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 456274950639437004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.01999998, y: 0.5438156, z: 0}
-  m_LocalScale: {x: 0.57574, y: 0.57574, z: 0.57574}
+  m_LocalScale: {x: 1.48273, y: 1.48273, z: 1.48273}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -109,7 +109,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 7d6c1f204291fb2439d4979343a5b0d4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &456274950639437000
 CircleCollider2D:
@@ -144,9 +144,9 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.03830401
+  m_Distance: 0.54418325
   m_DampingRatio: 0
-  m_Frequency: 1.5
+  m_Frequency: 1
 --- !u!114 &456274950639437002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,4 +187,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
-  maxDragDistance: 2
+  maxDragDistance: 6

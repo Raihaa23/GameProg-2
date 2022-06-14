@@ -88,6 +88,7 @@ namespace SlingshotScripts
       {
          yield return new WaitForSeconds(_releaseDelay);
          _springJ.enabled = false;
+         GameEvents.OnSetCameraMethod(gameObject);
       }
    
 

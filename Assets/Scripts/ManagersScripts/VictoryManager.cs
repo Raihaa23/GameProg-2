@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using System.Diagnostics;
+using Data;
 using UnityEngine;
 using Events;
 using TMPro;
@@ -20,12 +21,14 @@ namespace ManagersScripts
             {
                 victoryScreen.SetActive(true);
                 victoryMessage.text = "Player 2 Wins";
+                PlayerTurnManager.Instance.playerInTurnName = "Player1";
                 Time.timeScale = 0;
             }
             else if (player2Data.currentIntegrity <= 0)
             {
                 victoryScreen.SetActive(true);
                 victoryMessage.text = "Player 1 Wins";
+                PlayerTurnManager.Instance.playerInTurnName = "Player2";
                 Time.timeScale = 0;
             }
             
@@ -37,16 +40,28 @@ namespace ManagersScripts
             {
                 victoryScreen.SetActive(true);
                 victoryMessage.text = "Player 1 Wins";
+                PlayerTurnManager.Instance.playerInTurnName = "Player2";
             }
             else if (player2Data.currentIntegrity > player1Data.currentIntegrity)
             {
                 victoryScreen.SetActive(true);
                 victoryMessage.text = "Player 2 Wins";
+                PlayerTurnManager.Instance.playerInTurnName = "Player1";
             }
             else if (player1Data.currentIntegrity == player2Data.currentIntegrity)
             {
                 victoryScreen.SetActive(true);
                 victoryMessage.text = "TIE";
+                switch (PlayerTurnManager.Instance.playerInTurnName)
+                {
+                    case "Player1":
+                        PlayerTurnManager.Instance.playerInTurnName = "Player2";
+                        break;
+                    
+                    case "Player2":
+                        PlayerTurnManager.Instance.playerInTurnName = "Player1";
+                        break;
+                }
             }
             Time.timeScale = 0;
         }
