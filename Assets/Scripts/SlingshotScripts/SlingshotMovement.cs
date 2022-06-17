@@ -49,6 +49,7 @@ namespace SlingshotScripts
          if (!_hit.collider.gameObject.CompareTag(playerData.equippedAmmo) || !_isDraggable) return;
          _temporaryTag = "BallTag";
          _rigidB.isKinematic = true;
+         GameEvents.OnToggleAmmoTextMethod();
          GameEvents.OnToggleAmmoButtonMethod();
          GameEvents.OnPauseTurnTimerMethod();
       }

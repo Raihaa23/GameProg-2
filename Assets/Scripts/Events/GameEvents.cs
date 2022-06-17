@@ -132,6 +132,16 @@ namespace Events
                 OnCountToEnd();
             }
         }
+        
+        public delegate void ToggleAmmoText();
+        public static event ToggleAmmoText OnToggleAmmoText;
+        public static void OnToggleAmmoTextMethod()
+        {
+            if (OnToggleAmmoText != null)
+            {
+                OnToggleAmmoText();
+            }
+        }
 
     }
 }

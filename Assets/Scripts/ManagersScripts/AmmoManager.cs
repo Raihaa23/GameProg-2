@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Data.Player;
 using Events;
 using SlingshotScripts;
+using TMPro;
 using UnityEngine;
 
 namespace ManagersScripts
@@ -16,12 +17,15 @@ namespace ManagersScripts
         [SerializeField] private List<GameObject> ammoList = new List<GameObject>();
         [SerializeField] private GameObject ammoButtons;
 
+        [SerializeField] private TextMeshProUGUI ammoToText;
+
         [SerializeField] private int ammoLeft = 0;
 
         private void Start()
         {
             LoadAmmo();
             ToggleAmmoButtons();
+            ToggleAmmoText();
         }
         
         private void LoadAmmo() //instantiates a ball and sets its origin
@@ -30,6 +34,11 @@ namespace ManagersScripts
             currentAmmo = ammoList[ammoIndex];
             var slingshot = currentAmmo.GetComponent<Slingshot>();
             ammoLeft = slingshot.totalAmmo;
+            ammoToText.text = "Ammo: " + ammoLeft;
+            if (ammoLeft <= -1)
+            {
+                ammoToText.text = "Ammo: Infinite";
+            }
             currentAmmo.transform.position = origin.position;
             currentAmmo.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;
             playerData.equippedAmmo = currentAmmo.tag;
@@ -92,12 +101,27 @@ namespace ManagersScripts
             }
             ammoIndex = 0;
         }
+
+        private void ToggleAmmoText()
+        {
+            if (playerData.playerName != PlayerTurnManager.Instance.playerInTurnName) return;
+            switch (ammoToText.enabled)
+            {
+                case true:
+                    ammoToText.enabled = false;
+                    break;
+                case false:
+                    ammoToText.enabled = true;
+                    break;
+            }
+        }
         
         private void OnEnable()
         {
             GameEvents.OnLoadAmmo += LoadAmmo;
             GameEvents.OnToggleAmmoButton += ToggleAmmoButtons;
             GameEvents.OnReduceAmmo += ReduceAmmo;
+            GameEvents.OnToggleAmmoText += ToggleAmmoText;
         }
 
         private void OnDisable()
@@ -105,6 +129,7 @@ namespace ManagersScripts
             GameEvents.OnLoadAmmo -= LoadAmmo;
             GameEvents.OnToggleAmmoButton -= ToggleAmmoButtons;
             GameEvents.OnReduceAmmo -= ReduceAmmo;
+            GameEvents.OnToggleAmmoText -= ToggleAmmoText;
         }
     }
 }

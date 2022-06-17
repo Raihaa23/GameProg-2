@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc0dabb67674b1895f44641bdbc4f67, type: 3}
   m_Name: Bomb
   m_EditorClassIdentifier: 
-  baseDamage: 30
+  damageMultiplier: 1.5
   specialDamage: 150

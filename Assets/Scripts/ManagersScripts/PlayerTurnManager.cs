@@ -67,6 +67,7 @@ namespace ManagersScripts
                 
                 
             }
+            GameEvents.OnToggleAmmoTextMethod();
             GameEvents.OnToggleAmmoButtonMethod();
             GameEvents.OnToggleCameraMethod();
             GameEvents.OnLoadAmmoMethod();

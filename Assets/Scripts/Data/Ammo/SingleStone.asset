@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc0dabb67674b1895f44641bdbc4f67, type: 3}
   m_Name: SingleStone
   m_EditorClassIdentifier: 
-  baseDamage: 50
+  damageMultiplier: 5
   specialDamage: 0

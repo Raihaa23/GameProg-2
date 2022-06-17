@@ -58,6 +58,7 @@ namespace Timers
             else
             {
                 Debug.Log("Turn Times Up");
+                GameEvents.OnToggleAmmoTextMethod();
                 GameEvents.OnToggleAmmoButtonMethod();
                 GameEvents.OnDestroyAmmoMethod();
                 PlayerTurnManager.Instance.EndTurn();

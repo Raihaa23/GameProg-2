@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc0dabb67674b1895f44641bdbc4f67, type: 3}
   m_Name: SplitShot
   m_EditorClassIdentifier: 
-  baseDamage: 40
+  damageMultiplier: 3
   specialDamage: 0

@@ -28,7 +28,6 @@ namespace DestructibleScripts
                 damageAmount += _currentHealth;
             }
             playerData.currentIntegrity -= damageAmount;
-            Debug.Log(damageAmount);
             GameEvents.OnCalculateHpMethod();
             if (_currentHealth <= 0)
             {

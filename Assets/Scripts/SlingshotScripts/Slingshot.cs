@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using Data;
 using Data.Ammo;
 using Data.Player;
@@ -43,11 +44,12 @@ namespace SlingshotScripts
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
             if (PlayerTurnManager.Instance.isProjectileReleased != true) return;
-            var enemyGameObj = other.gameObject;
             if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
+                var impactForce = other.relativeVelocity.magnitude;
+                var enemyGameObj = other.gameObject;
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
-                enemyScript?.Damage(ammoData.baseDamage);
+                enemyScript?.Damage(ammoData.damageMultiplier * impactForce);
             }
             GameEvents.OnCountToEndMethod();
         }

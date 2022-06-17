@@ -13,11 +13,13 @@ namespace SlingshotScripts.AmmoTypes
         [SerializeField] protected AmmoData ammoData;
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
-            var enemyGameObj = other.gameObject;
+            
             if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
+                var impactForce = other.relativeVelocity.magnitude;
+                var enemyGameObj = other.gameObject;
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
-                enemyScript?.Damage(ammoData.baseDamage);
+                enemyScript?.Damage(ammoData.damageMultiplier * impactForce);
             }
             GameEvents.OnCountToEndMethod();
         }
