@@ -1,19 +1,24 @@
+using System.Collections;
 using Data;
+using Data.Ammo;
+using Data.Player;
 using ManagersScripts;
 using UnityEngine;
 using Interfaces;
 using Events;
+using Unity.VisualScripting;
 
 namespace SlingshotScripts
 {
     public class Slingshot : MonoBehaviour
     {
-        [SerializeField] private SlingshotInputHandler inputHandler;
-        [SerializeField] private SlingshotMovement movement;
-        [SerializeField] private PlayerData playerData;
-        private void Update()
+        [SerializeField] protected SlingshotInputHandler inputHandler;
+        [SerializeField] protected SlingshotMovement movement;
+        [SerializeField] protected PlayerData playerData;
+        [SerializeField] protected AmmoData ammoData;
+        public int totalAmmo;
+        protected virtual void Update()
         {
-            CheckForBallReleaseAndRest();
             HandleShot();
         }
 
@@ -42,33 +47,30 @@ namespace SlingshotScripts
             if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
-                enemyScript?.Damage(50);
+                enemyScript?.Damage(ammoData.baseDamage);
             }
+            GameEvents.OnCountToEndMethod();
         }
-
-        private void CheckForBallReleaseAndRest() // Checks if the ball is release and rested to end turn
+        private void ReduceAmmo()
         {
-            if (movement.BallIsSleeping() && PlayerTurnManager.Instance.isProjectileReleased)
-            {
-                GameEvents.OnDestroyBallMethod();
-            }
+            totalAmmo--;
         }
-
-        private void DestroyBall() //destroys projectile 
+        private void DestroyAmmo() //destroys projectile 
         {
-            playerData.equippedAmmo = null;
-            PlayerTurnManager.Instance.EndTurn();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
-        
         private void OnEnable()
         {
-            GameEvents.OnDestroyBall += DestroyBall;
+            GameEvents.OnDestroyAmmo += DestroyAmmo;
+            GameEvents.OnReduceAmmo += ReduceAmmo;
+            playerData.canDoAction = true;
         }
 
         private void OnDisable()
         {
-            GameEvents.OnDestroyBall -= DestroyBall;
+            GameEvents.OnDestroyAmmo -= DestroyAmmo;
+            GameEvents.OnReduceAmmo -= ReduceAmmo;
         }
+        
     }
 }

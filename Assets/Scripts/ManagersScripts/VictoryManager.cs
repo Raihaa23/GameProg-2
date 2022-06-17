@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Data;
+using Data.Player;
 using UnityEngine;
 using Events;
 using TMPro;
@@ -21,14 +22,12 @@ namespace ManagersScripts
             {
                 victoryScreen.SetActive(true);
                 victoryMessage.text = "Player 2 Wins";
-                PlayerTurnManager.Instance.playerInTurnName = "Player1";
                 Time.timeScale = 0;
             }
             else if (player2Data.currentIntegrity <= 0)
             {
                 victoryScreen.SetActive(true);
                 victoryMessage.text = "Player 1 Wins";
-                PlayerTurnManager.Instance.playerInTurnName = "Player2";
                 Time.timeScale = 0;
             }
             

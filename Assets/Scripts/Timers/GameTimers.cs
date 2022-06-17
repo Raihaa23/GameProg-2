@@ -1,4 +1,6 @@
-﻿using Events;
+﻿using System.Collections;
+using Events;
+using ManagersScripts;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +13,7 @@ namespace Timers
         private float _initialTurnTimeLeft;
         private bool _totalTimerOn;
         private bool _turnTimerOn;
+        private bool _isRunning = false;
 
         [SerializeField] private TextMeshProUGUI totalTimerTxt;
         [SerializeField] private TextMeshProUGUI turnTimerTxt;
@@ -55,7 +58,28 @@ namespace Timers
             else
             {
                 Debug.Log("Turn Times Up");
-                GameEvents.OnDestroyBallMethod();
+                GameEvents.OnToggleAmmoButtonMethod();
+                GameEvents.OnDestroyAmmoMethod();
+                PlayerTurnManager.Instance.EndTurn();
+            }
+        }
+        
+        private void CountToEnd()
+        {
+            StartCoroutine(Countdown());
+        }
+
+        private IEnumerator Countdown()
+        {
+            if (!_isRunning)
+            {
+                Debug.Log("initialize countdown");
+                _isRunning = true;
+                yield return new WaitForSeconds(5);
+                Debug.Log("Next Turn");
+                GameEvents.OnDestroyAmmoMethod();
+                PlayerTurnManager.Instance.EndTurn();
+                _isRunning = false;
             }
         }
 
@@ -75,7 +99,7 @@ namespace Timers
             currentTotalTime += 1;
             float minutes = Mathf.FloorToInt(currentTotalTime / 60);
             float seconds = Mathf.FloorToInt(currentTotalTime % 60);
-            totalTimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+            totalTimerTxt.text = $"{minutes:00} : {seconds:00}";
         }
         
         private void ConvertTurnTimer(float currentTurnTime) // Converts the Turn Timer into Minutes:Seconds format
@@ -90,12 +114,14 @@ namespace Timers
         {
             GameEvents.OnResetTurnTimer += ResetTurnTimer;
             GameEvents.OnPauseTurnTimer += PauseTurnTimer;
+            GameEvents.OnCountToEnd += CountToEnd;
         }
 
         private void OnDisable()
         {
             GameEvents.OnResetTurnTimer -= ResetTurnTimer;
             GameEvents.OnPauseTurnTimer -= PauseTurnTimer;
+            GameEvents.OnCountToEnd -= CountToEnd;
         }
     }
 }
