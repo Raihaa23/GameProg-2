@@ -7,19 +7,21 @@ using UnityEngine;
 
 public class ScrollingImage : MonoBehaviour
 {
+    public BoxCollider2D imageCollider;
+
+    [SerializeField]private float scrollSpeed;
     private Rigidbody2D imageRB;
-    private BoxCollider2D imageCollider;
     private float imageLength;
 
     private void Start()
     {
         //Set background velocity
         imageRB = GetComponent<Rigidbody2D>();
-        imageRB.velocity = new Vector2(-UIManager.instance.backgroundScrollSpeed, 0);
+        imageRB.velocity = new Vector2(-scrollSpeed, 0);
 
         //Get the background length
-        imageCollider = GetComponent<BoxCollider2D>();
-        imageLength = imageCollider.size.x;
+        //imageCollider = GetComponent<BoxCollider2D>();
+        imageLength = imageCollider.size.x; 
     }
 
     private void Update()

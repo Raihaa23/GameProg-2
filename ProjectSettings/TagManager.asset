@@ -18,14 +18,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Sky
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Back
+  - Background
+  - Mid
+  - Foreground
+  - Front
   - 
   - 
   - 
