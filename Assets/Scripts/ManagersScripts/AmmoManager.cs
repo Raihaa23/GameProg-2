@@ -42,6 +42,7 @@ namespace ManagersScripts
             currentAmmo.transform.position = origin.position;
             currentAmmo.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;
             playerData.equippedAmmo = currentAmmo.tag;
+            currentAmmo.transform.eulerAngles = new Vector3(0,0,0);
             currentAmmo.SetActive(true);
             PlayerTurnManager.Instance.isProjectileReleased = false;
         }
