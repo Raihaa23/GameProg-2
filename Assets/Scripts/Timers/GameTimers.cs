@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Data.Level;
 using Events;
 using ManagersScripts;
 using TMPro;
@@ -8,7 +9,9 @@ namespace Timers
 {
     public class GameTimers : MonoBehaviour
     {
-        [SerializeField] private float totalTimeLeft;
+        [SerializeField] private LevelData levelData;
+        
+        private float _totalTimeLeft;
         [SerializeField] private float turnTimeLeft;
         private float _initialTurnTimeLeft;
         private bool _totalTimerOn;
@@ -23,6 +26,7 @@ namespace Timers
             _totalTimerOn = true;
             _turnTimerOn = true;
             _initialTurnTimeLeft = turnTimeLeft;
+            _totalTimeLeft = levelData.timerChoice;
         }
 
         private void Update()
@@ -34,14 +38,14 @@ namespace Timers
         private void UpdateTotalTimer() // updates the Main timer of the game
         {
             if (!_totalTimerOn) return;
-            if (totalTimeLeft > 0)
+            if (_totalTimeLeft > 0)
             {
-                totalTimeLeft -= Time.deltaTime;
-                ConvertTotalTimer(totalTimeLeft);
+                _totalTimeLeft -= Time.deltaTime;
+                ConvertTotalTimer(_totalTimeLeft);
             }
             else
             {
-                totalTimeLeft = 0;
+                _totalTimeLeft = 0;
                 _totalTimerOn = false;
                 GameEvents.OnTimeUpMethod();
             }
