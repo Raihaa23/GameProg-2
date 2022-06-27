@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a994ab1895629aa41b22bc2515f2ddcd, type: 3}
-  m_Name: P1_dest_npc_sample
+  m_Script: {fileID: 11500000, guid: fbc0dabb67674b1895f44641bdbc4f67, type: 3}
+  m_Name: SplitShot
   m_EditorClassIdentifier: 
-  health: 50
+  damageMultiplier: 3
+  specialDamage: 0

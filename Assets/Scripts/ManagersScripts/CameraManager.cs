@@ -1,5 +1,4 @@
-﻿using System;
-using Cinemachine;
+﻿using Cinemachine;
 using UnityEngine;
 using Events;
 
@@ -16,21 +15,14 @@ namespace ManagersScripts
             ToggleCamera();
         }
 
-        private void Update()
-        {
-            Debug.Log(cvCamera.Follow);
-        }
-
         private void ToggleCamera()
         {
-            if (PlayerTurnManager.Instance.playerInTurnName == "Player1")
+            cvCamera.Follow = PlayerTurnManager.Instance.playerInTurnName switch
             {
-                cvCamera.Follow = player1Base;
-            }
-            else if (PlayerTurnManager.Instance.playerInTurnName == "Player2")
-            {
-                cvCamera.Follow = player2Base;
-            }
+                "Player1" => player1Base,
+                "Player2" => player2Base,
+                _ => cvCamera.Follow
+            };
         }
         private void SetCamera(GameObject projectile)
         {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Data
+namespace Data.Player
 {
     [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Data", order = 0)]
     public class PlayerData : ScriptableObject
@@ -12,5 +12,7 @@ namespace Data
         public float totalIntegrity;
         public float currentIntegrity;
         
+        public bool canDoAction;
+
     }
 }

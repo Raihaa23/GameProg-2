@@ -1,5 +1,5 @@
 using System.Collections;
-using Data;
+using Data.Player;
 using Events;
 using ManagersScripts;
 using UnityEngine;
@@ -49,6 +49,9 @@ namespace SlingshotScripts
          if (!_hit.collider.gameObject.CompareTag(playerData.equippedAmmo) || !_isDraggable) return;
          _temporaryTag = "BallTag";
          _rigidB.isKinematic = true;
+         GameEvents.OnToggleAmmoTextMethod();
+         GameEvents.OnToggleAmmoButtonMethod();
+         GameEvents.OnPauseTurnTimerMethod();
       }
 
       public void CheckForBallDrag() //drags the projectile while in the slingshot
@@ -76,13 +79,10 @@ namespace SlingshotScripts
          StartCoroutine(Release());
          _isDraggable = false;
          PlayerTurnManager.Instance.isProjectileReleased = true;
-         GameEvents.OnPauseTurnTimerMethod();
+         GameEvents.OnReduceAmmoMethod();
       }
 
-      public bool BallIsSleeping()// returns true if projectile is not moving anymore
-      {
-         return _rigidB.IsSleeping();
-      }
+   
    
       private IEnumerator Release() //delay for projectile release
       {
@@ -90,7 +90,6 @@ namespace SlingshotScripts
          _springJ.enabled = false;
          GameEvents.OnSetCameraMethod(gameObject);
       }
-   
 
       private void HandleRaycast() // handles the raycast and converts the mouse position
       {
@@ -108,7 +107,12 @@ namespace SlingshotScripts
          _line.SetPosition(0, _rigidB.position);
          _line.SetPosition(1, _slingRb.position);
       }
-   
-   
+
+      private void OnEnable()
+      {
+         if (_springJ == null) return;
+         _springJ.enabled = true;
+         _isDraggable = true;
+      }
    }
 }

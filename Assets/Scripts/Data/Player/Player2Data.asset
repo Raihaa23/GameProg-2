@@ -15,5 +15,10 @@ MonoBehaviour:
   playerName: Player2
   enemyDestructible: Player1Destructible
   equippedAmmo: 
+  ammoIndex: 0
   totalIntegrity: 0
   currentIntegrity: 0
+  ammoList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

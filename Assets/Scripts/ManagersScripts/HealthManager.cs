@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Globalization;
 using Data;
+using Data.Player;
+using Events;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +18,9 @@ namespace ManagersScripts
         private float _integrityInPercent;
         [SerializeField] private Slider slider;
 
-        private void Update()
+        private void Start()
         {
-         CalculateIntegrityRate();   
+            slider.value = 100f;
         }
 
         private void CalculateIntegrityRate() // Calculates the total integrity of the player into percent then prints to text
@@ -26,6 +29,16 @@ namespace ManagersScripts
             _integrityInPercent *= 100f;
             slider.value = _integrityInPercent;
             textDisplay.text = _integrityInPercent.ToString("f2") + "%";
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.OnCalculateHp += CalculateIntegrityRate;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.OnCalculateHp -= CalculateIntegrityRate;
         }
     }
 }

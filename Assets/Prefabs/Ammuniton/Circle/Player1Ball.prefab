@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 456274950639437003}
   - component: {fileID: 456274950639437014}
+  - component: {fileID: -3372706847067451465}
+  - component: {fileID: -2952479488888705117}
+  - component: {fileID: 453141831238626774}
   - component: {fileID: 456274950639437015}
   - component: {fileID: 456274950639437000}
   - component: {fileID: 456274950639437001}
-  - component: {fileID: 456274950639437002}
-  - component: {fileID: -2952479488888705117}
-  - component: {fileID: 453141831238626774}
   m_Layer: 8
   m_Name: Player1Ball
   m_TagString: Player1Ball
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456274950639437004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01999998, y: 0.5438156, z: 0}
+  m_LocalPosition: {x: -14.860001, y: 3.95, z: 0}
   m_LocalScale: {x: 1.48273, y: 1.48273, z: 1.48273}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90,6 +90,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3372706847067451465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456274950639437004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0150088ce27548e5a44ad80443c27cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: -2952479488888705117}
+  movement: {fileID: 453141831238626774}
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  ammoData: {fileID: 11400000, guid: 8e3797b5150411a4593b3f3065f01922, type: 2}
+  totalAmmo: -1
+--- !u!114 &-2952479488888705117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456274950639437004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0567dac5d5b254ca88d4aa56e8f9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &453141831238626774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456274950639437004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e2e2b928228b446b3cfbbb3e6dc96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  maxDragDistance: 6
 --- !u!50 &456274950639437015
 Rigidbody2D:
   serializedVersion: 4
@@ -147,44 +190,3 @@ SpringJoint2D:
   m_Distance: 0.54418325
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &456274950639437002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456274950639437004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52262da0281d14f41883e3f3bd86c73c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputHandler: {fileID: -2952479488888705117}
-  movement: {fileID: 453141831238626774}
-  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
---- !u!114 &-2952479488888705117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456274950639437004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab0567dac5d5b254ca88d4aa56e8f9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &453141831238626774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456274950639437004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95e2e2b928228b446b3cfbbb3e6dc96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
-  maxDragDistance: 6

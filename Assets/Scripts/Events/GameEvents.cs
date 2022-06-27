@@ -33,13 +33,33 @@ namespace Events
             }
         }
         
-        public delegate void DestroyBall();
-        public static event DestroyBall OnDestroyBall;
-        public static void OnDestroyBallMethod()
+        // public delegate void QueueNextTurn();
+        // public static event QueueNextTurn OnQueueNextTurn;
+        // public static void OnQueueNextTurnMethod()
+        // {
+        //     if (OnQueueNextTurn != null)
+        //     {
+        //         OnQueueNextTurn();
+        //     }
+        // }
+        
+        public delegate void DestroyAmmo();
+        public static event DestroyAmmo OnDestroyAmmo;
+        public static void OnDestroyAmmoMethod()
         {
-            if (OnDestroyBall != null)
+            if (OnDestroyAmmo != null)
             {
-                OnDestroyBall();
+                OnDestroyAmmo();
+            }
+        }
+        
+        public delegate void ToggleAmmoButton();
+        public static event ToggleAmmoButton OnToggleAmmoButton;
+        public static void OnToggleAmmoButtonMethod()
+        {
+            if (OnToggleAmmoButton != null)
+            {
+                OnToggleAmmoButton();
             }
         }
         
@@ -82,5 +102,46 @@ namespace Events
                 OnToggleCamera();
             }
         }
+        
+        public delegate void CalculateHp();
+        public static event CalculateHp OnCalculateHp;
+        public static void OnCalculateHpMethod()
+        {
+            if (OnCalculateHp != null)
+            {
+                OnCalculateHp();
+            }
+        }
+        
+        public delegate void ReduceAmmo();
+        public static event ReduceAmmo OnReduceAmmo;
+        public static void OnReduceAmmoMethod()
+        {
+            if (OnReduceAmmo != null)
+            {
+                OnReduceAmmo();
+            }
+        }
+        
+        public delegate void CountToEnd();
+        public static event CountToEnd OnCountToEnd;
+        public static void OnCountToEndMethod()
+        {
+            if (OnCountToEnd != null)
+            {
+                OnCountToEnd();
+            }
+        }
+        
+        public delegate void ToggleAmmoText();
+        public static event ToggleAmmoText OnToggleAmmoText;
+        public static void OnToggleAmmoTextMethod()
+        {
+            if (OnToggleAmmoText != null)
+            {
+                OnToggleAmmoText();
+            }
+        }
+
     }
 }
