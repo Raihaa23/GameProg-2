@@ -34,14 +34,13 @@ namespace ManagersScripts
 
         private void Start()
         {
-            GameEvents.OnResetPlayerDataMethod();
-            // GameEvents.OnResetLevelDataMethod();
+            DataEvents.OnResetPlayerDataMethod();
         }
 
         public void EndTurn() // Ends player turn after projectile is destroyed
         {
-            GameEvents.OnVictoryMethod();
-            GameEvents.OnResetTurnTimerMethod();
+            MatchEvents.OnVictoryMethod();
+            TimerEvents.OnResetTurnTimerMethod();
 
             if (playerInTurnName == "Player1")
             {
@@ -55,10 +54,10 @@ namespace ManagersScripts
                 
                 
             }
-            GameEvents.OnToggleAmmoTextMethod();
-            GameEvents.OnToggleAmmoButtonMethod();
-            GameEvents.OnToggleCameraMethod();
-            GameEvents.OnLoadAmmoMethod();
+            UIEvents.OnToggleAmmoTextMethod();
+            UIEvents.OnToggleAmmoButtonMethod();
+            CameraEvents.OnToggleCameraMethod();
+            AmmoEvents.OnLoadAmmoMethod();
         }
 
         

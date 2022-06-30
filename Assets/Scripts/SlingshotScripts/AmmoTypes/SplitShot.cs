@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 
 namespace SlingshotScripts.AmmoTypes
 {
-    public class SplitShot : Slingshot
+    public class SplitShot : Projectile
     {
         [SerializeField] private List<GameObject> splitDebris = new List<GameObject>();
         [SerializeField] private List<GameObject> debriSpawnLoc = new List<GameObject>();
@@ -15,15 +15,12 @@ namespace SlingshotScripts.AmmoTypes
         private int _index = 0;
         private float _xForceMultiplier = 60;
         private float _yForceMultiplier = 100;
-        protected override void Update()
+        private void Update()
         {
             HandleAction();
-            var rb = GetComponent<Rigidbody2D>();
-            Debug.Log(rb.velocity.magnitude);
-            base.Update();
         }
         
-        private void HandleAction()
+        private void HandleAction() // handles the action for this ammo type
         {
             if (!inputHandler.SpaceBarDown) return;
             if (PlayerTurnManager.Instance.isProjectileReleased && playerData.canDoAction)
@@ -33,7 +30,7 @@ namespace SlingshotScripts.AmmoTypes
             }
         }
 
-        private void SplitIntoDebris()
+        private void SplitIntoDebris() // action
         {
             foreach (var debris in splitDebris)
             {
@@ -54,7 +51,7 @@ namespace SlingshotScripts.AmmoTypes
             _index = 0;
             _xForceMultiplier = 60;
             _yForceMultiplier = 100;
-            GameEvents.OnSetCameraMethod(splitDebris[1]);
+            CameraEvents.OnSetCameraMethod(splitDebris[1]);
             gameObject.SetActive(false);
         }
         

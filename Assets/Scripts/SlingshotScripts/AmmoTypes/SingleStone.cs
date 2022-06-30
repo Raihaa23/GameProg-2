@@ -4,15 +4,14 @@ using UnityEngine;
 
 namespace SlingshotScripts.AmmoTypes
 {
-    public class SingleStone : Slingshot
+    public class SingleStone : Projectile
     {
-        protected override void Update()
+        private void Update()
         {
             HandleAction();
-            base.Update();
         }
         
-        private void HandleAction()
+        private void HandleAction() // handles the action for this ammo type
         {
             if (!inputHandler.SpaceBarDown) return;
             if (PlayerTurnManager.Instance.isProjectileReleased && playerData.canDoAction)
