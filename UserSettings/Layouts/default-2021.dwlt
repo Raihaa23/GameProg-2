@@ -43,14 +43,14 @@ MonoBehaviour:
     y: 0
     width: 1032.8
     height: 476
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 16}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 87
+  controlID: 57
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -147,14 +147,14 @@ MonoBehaviour:
     y: 476
     width: 1224
     height: 254.79999
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 59
+  controlID: 58
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 60
+  controlID: 59
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Ammuniton/Square
+    - Assets/Scripts/Data/Level
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Ammuniton/Square
+  - Assets/Scripts/Data/Level
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Work Files\College\2nd Year 4th Term\Game Programming 3\Slings-and-Stones
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e740000
-    m_LastClickedID: 29726
-    m_ExpandedIDs: 00000000b4620000b6620000c2620000d466000000ca9a3b
+    scrollPos: {x: 0, y: 94.20001}
+    m_SelectedIDs: e2860000
+    m_LastClickedID: 34530
+    m_ExpandedIDs: 00000000a8630000ce6600002e6a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b4620000b6620000
+    m_ExpandedIDs: 00000000a8630000aa630000ac630000ae630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: bacbffffc2e3ffff0efbffff7e890000
+      m_SelectedIDs: 06d20000
+      m_LastClickedID: 53766
+      m_ExpandedIDs: 5a6fffff1075ffff1a79ffff2c7affffd07cffffe291ffff8c94ffffec94ffff9097ffff469affffb49affff589dffffcc9dffff70a0ffffcaa7ffffe4bdffffcccaffffcecaffff30d2ffff16d8ffff98d8ffffe2dbffff36dcffff1cf2ffffc8f4ffff86faffffda620000b4810000088c000042b400007ed10000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -761,9 +761,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.28903657, y: -0.120214075, z: 0.16702215}
+    m_Target: {x: -5.182501, y: 5.7193174, z: 0.32528898}
     speed: 2
-    m_Value: {x: -0.28903657, y: -0.120214075, z: 0.16702215}
+    m_Value: {x: -5.182501, y: 5.7193174, z: 0.32528898}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -814,9 +814,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.052296
+    m_Target: 9.790923
     speed: 2
-    m_Value: 7.052296
+    m_Value: 9.790923
   m_Ortho:
     m_Target: 1
     speed: 2

@@ -142,6 +142,26 @@ namespace Events
                 OnToggleAmmoText();
             }
         }
+        
+        public delegate void ResetPlayerData();
+        public static event ResetPlayerData OnResetPlayerData;
+        public static void OnResetPlayerDataMethod()
+        {
+            if (OnResetPlayerData != null)
+            {
+                OnResetPlayerData();
+            }
+        }
+        
+        // public delegate void ResetLevelData();
+        // public static event ResetLevelData OnResetLevelData;
+        // public static void OnResetLevelDataMethod()
+        // {
+        //     if (OnResetLevelData != null)
+        //     {
+        //         OnResetLevelData();
+        //     }
+        // }
 
     }
 }

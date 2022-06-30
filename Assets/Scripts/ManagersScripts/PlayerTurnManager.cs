@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Data;
 using Data.Player;
 using Events;
@@ -29,27 +30,14 @@ namespace ManagersScripts
         #endregion
 
         public string playerInTurnName;
-        
-        [SerializeField] private PlayerData player1Data;
-        [SerializeField] private PlayerData player2Data;
         public bool isProjectileReleased;
+
         private void Start()
         {
-         ResetPlayerData();   
+            GameEvents.OnResetPlayerDataMethod();
+            // GameEvents.OnResetLevelDataMethod();
         }
-        public void ResetPlayerData() // Resets the Players' data
-        {
-            Time.timeScale = 1;
-            player1Data.currentIntegrity = 0;
-            player1Data.equippedAmmo = null;
-            player1Data.totalIntegrity = 0;
-            player1Data.canDoAction = true;
 
-            player2Data.currentIntegrity = 0;
-            player2Data.equippedAmmo = null;
-            player2Data.totalIntegrity = 0;
-            player2Data.canDoAction = true;
-        }
         public void EndTurn() // Ends player turn after projectile is destroyed
         {
             GameEvents.OnVictoryMethod();
