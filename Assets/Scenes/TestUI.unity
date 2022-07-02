@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &108119099
 Transform:
   m_ObjectHideFlags: 0
@@ -2242,7 +2242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1428488606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4100,6 +4100,18 @@ PrefabInstance:
     - target: {fileID: 529258900074094749, guid: fced5a30902daa84f809440f5865b02b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529258900074094751, guid: fced5a30902daa84f809440f5865b02b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 529258900074094751, guid: fced5a30902daa84f809440f5865b02b, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1366
+      objectReference: {fileID: 0}
+    - target: {fileID: 529258900074094751, guid: fced5a30902daa84f809440f5865b02b, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 768
       objectReference: {fileID: 0}
     - target: {fileID: 529258900161926367, guid: fced5a30902daa84f809440f5865b02b, type: 3}
       propertyPath: m_AnchorMax.x
