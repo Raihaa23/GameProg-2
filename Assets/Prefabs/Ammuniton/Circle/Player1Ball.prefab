@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 456274950639437003}
   - component: {fileID: 456274950639437014}
   - component: {fileID: -3372706847067451465}
+  - component: {fileID: -4750498950228932897}
   - component: {fileID: -2952479488888705117}
   - component: {fileID: 453141831238626774}
   - component: {fileID: 456274950639437015}
@@ -103,10 +104,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputHandler: {fileID: -2952479488888705117}
+  ammoData: {fileID: 11400000, guid: 8e3797b5150411a4593b3f3065f01922, type: 2}
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  totalAmmo: -1
+--- !u!114 &-4750498950228932897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456274950639437004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52262da0281d14f41883e3f3bd86c73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: -2952479488888705117}
   movement: {fileID: 453141831238626774}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
-  ammoData: {fileID: 11400000, guid: 8e3797b5150411a4593b3f3065f01922, type: 2}
-  totalAmmo: -1
 --- !u!114 &-2952479488888705117
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,33 +1,28 @@
-﻿using System.Diagnostics;
-using Data;
-using Data.Player;
-using UnityEngine;
+﻿using Data.Player;
 using Events;
 using TMPro;
+using UnityEngine;
 
-
-namespace ManagersScripts
+namespace ManagersScripts.Victory
 {
     public class VictoryManager : MonoBehaviour
     {
+        [SerializeField] private VictoryUIManager victoryUI;
         [SerializeField] private PlayerData player1Data;
         [SerializeField] private PlayerData player2Data;
 
-        [SerializeField] private GameObject victoryScreen;
-        [SerializeField] private TextMeshProUGUI victoryMessage;
+       
 
         private void CheckVictory() // Called to check if a player has reached 0 health
         {
             if (player1Data.currentIntegrity <= 0)
             {
-                victoryScreen.SetActive(true);
-                victoryMessage.text = "Player 2 Wins";
+                victoryUI.SetVictoryScreen("Player 2 Wins");
                 Time.timeScale = 0;
             }
             else if (player2Data.currentIntegrity <= 0)
             {
-                victoryScreen.SetActive(true);
-                victoryMessage.text = "Player 1 Wins";
+                victoryUI.SetVictoryScreen("Player 1 Wins");
                 Time.timeScale = 0;
             }
             
@@ -37,20 +32,17 @@ namespace ManagersScripts
         {
             if (player1Data.currentIntegrity > player2Data.currentIntegrity)
             {
-                victoryScreen.SetActive(true);
-                victoryMessage.text = "Player 1 Wins";
+                victoryUI.SetVictoryScreen("Player 1 Wins");
                 PlayerTurnManager.Instance.playerInTurnName = "Player2";
             }
             else if (player2Data.currentIntegrity > player1Data.currentIntegrity)
             {
-                victoryScreen.SetActive(true);
-                victoryMessage.text = "Player 2 Wins";
+                victoryUI.SetVictoryScreen("Player 2 Wins");
                 PlayerTurnManager.Instance.playerInTurnName = "Player1";
             }
             else if (player1Data.currentIntegrity == player2Data.currentIntegrity)
             {
-                victoryScreen.SetActive(true);
-                victoryMessage.text = "TIE";
+                victoryUI.SetVictoryScreen("TIE");
                 switch (PlayerTurnManager.Instance.playerInTurnName)
                 {
                     case "Player1":
@@ -68,14 +60,14 @@ namespace ManagersScripts
 
         private void OnEnable()
         {
-            GameEvents.OnCheckVictory += CheckVictory;
-            GameEvents.OnTimeUp += TimeUp;
+            MatchEvents.OnCheckVictory += CheckVictory;
+            TimerEvents.OnTimeUp += TimeUp;
         }
 
         private void OnDisable()
         {
-            GameEvents.OnCheckVictory -= CheckVictory;
-            GameEvents.OnTimeUp -= TimeUp;
+            MatchEvents.OnCheckVictory -= CheckVictory;
+            TimerEvents.OnTimeUp -= TimeUp;
         }
     }
 }

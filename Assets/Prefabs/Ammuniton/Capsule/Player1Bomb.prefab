@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6278169846172586086}
   - component: {fileID: 8102343919577354848}
   - component: {fileID: 6613540955370253153}
+  - component: {fileID: -4901397950913233046}
   - component: {fileID: 8339311487287334104}
   - component: {fileID: 3631727092672212321}
   - component: {fileID: 2706307992583885562}
@@ -103,15 +104,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputHandler: {fileID: 3631727092672212321}
-  movement: {fileID: 8339311487287334104}
-  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
   ammoData: {fileID: 11400000, guid: a504446a43092ed4682115f6e9d97ccd, type: 2}
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
   totalAmmo: 1
   fieldOfImpact: 5
   force: 500
   layerToHit:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &-4901397950913233046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624642761799106978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52262da0281d14f41883e3f3bd86c73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: 3631727092672212321}
+  movement: {fileID: 8339311487287334104}
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
 --- !u!114 &8339311487287334104
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,20 +6,19 @@ using ManagersScripts;
 
 namespace SlingshotScripts.AmmoTypes
 {
-    public class BombShot : Slingshot
+    public class BombShot : Projectile
     {
         [SerializeField] private float fieldOfImpact;
         [SerializeField] private float force;
 
         [SerializeField] private LayerMask layerToHit;
 
-        protected override void Update()
+        private void Update()
         {
             HandleAction();
-            base.Update();
         }
 
-        private void HandleAction()
+        private void HandleAction() // handles the action for this ammo type
         {
             if (!inputHandler.SpaceBarDown) return;
             if (PlayerTurnManager.Instance.isProjectileReleased && playerData.canDoAction)
@@ -29,7 +28,7 @@ namespace SlingshotScripts.AmmoTypes
             }
         }
 
-        private void Explode()
+        private void Explode() // action
         {
            Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, layerToHit);
 
@@ -40,8 +39,8 @@ namespace SlingshotScripts.AmmoTypes
                var enemyScript = obj.GetComponent<IDamageable>();
                enemyScript?.Damage(ammoData.specialDamage);
            }
-           GameEvents.OnCountToEndMethod();
-           GameEvents.OnDestroyAmmoMethod();
+           MatchEvents.OnCountToEndMethod();
+           AmmoEvents.OnDestroyAmmoMethod();
         }
         
         private void OnDrawGizmosSelected()

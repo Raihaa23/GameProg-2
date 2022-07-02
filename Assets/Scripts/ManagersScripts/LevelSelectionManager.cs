@@ -9,12 +9,12 @@ namespace ManagersScripts
     {
         [SerializeField] private LevelData levelData;
 
-        public void TimerChoice(float timeChoice)
+        public void TimerChoice(float timeChoice) // sets the timer value
         {
             levelData.timerChoice = timeChoice * 60;
         }
 
-        public void LevelChoice(string levelChoice)
+        public void LevelChoice(string levelChoice) // sets the level value
         {
             levelData.levelChoice = levelChoice;
         }

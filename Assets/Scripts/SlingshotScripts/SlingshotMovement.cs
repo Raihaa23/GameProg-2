@@ -49,9 +49,9 @@ namespace SlingshotScripts
          if (!_hit.collider.gameObject.CompareTag(playerData.equippedAmmo) || !_isDraggable) return;
          _temporaryTag = "BallTag";
          _rigidB.isKinematic = true;
-         GameEvents.OnToggleAmmoTextMethod();
-         GameEvents.OnToggleAmmoButtonMethod();
-         GameEvents.OnPauseTurnTimerMethod();
+         UIEvents.OnToggleAmmoTextMethod();
+         UIEvents.OnToggleAmmoButtonMethod();
+         TimerEvents.OnPauseTurnTimerMethod();
       }
 
       public void CheckForBallDrag() //drags the projectile while in the slingshot
@@ -79,7 +79,7 @@ namespace SlingshotScripts
          StartCoroutine(Release());
          _isDraggable = false;
          PlayerTurnManager.Instance.isProjectileReleased = true;
-         GameEvents.OnReduceAmmoMethod();
+         AmmoEvents.OnReduceAmmoMethod();
       }
 
    
@@ -88,7 +88,7 @@ namespace SlingshotScripts
       {
          yield return new WaitForSeconds(_releaseDelay);
          _springJ.enabled = false;
-         GameEvents.OnSetCameraMethod(gameObject);
+         CameraEvents.OnSetCameraMethod(gameObject);
       }
 
       private void HandleRaycast() // handles the raycast and converts the mouse position

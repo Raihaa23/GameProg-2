@@ -15,7 +15,7 @@ namespace ManagersScripts
             ToggleCamera();
         }
 
-        private void ToggleCamera()
+        private void ToggleCamera() // toggles the camera focus based on the current player turn
         {
             cvCamera.Follow = PlayerTurnManager.Instance.playerInTurnName switch
             {
@@ -24,22 +24,22 @@ namespace ManagersScripts
                 _ => cvCamera.Follow
             };
         }
-        private void SetCamera(GameObject projectile)
+        private void SetCamera(GameObject projectile) // sets the camera focus on the projectile
         {
             cvCamera.Follow = projectile.transform;
 
         }
         private void OnEnable()
         {
-            GameEvents.OnSetCamera += SetCamera;
-            GameEvents.OnToggleCamera += ToggleCamera;
+            CameraEvents.OnSetCamera += SetCamera;
+            CameraEvents.OnToggleCamera += ToggleCamera;
 
         }
 
         private void OnDisable()
         {
-            GameEvents.OnSetCamera -= SetCamera;
-            GameEvents.OnToggleCamera -= ToggleCamera;
+            CameraEvents.OnSetCamera -= SetCamera;
+            CameraEvents.OnToggleCamera -= ToggleCamera;
 
         }
     }

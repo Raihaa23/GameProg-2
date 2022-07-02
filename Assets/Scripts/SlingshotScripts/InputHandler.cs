@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SlingshotScripts
 {
-    public class SlingshotInputHandler : MonoBehaviour
+    public class InputHandler : MonoBehaviour
     {
         public bool MouseInputDown { get; private set;}
         public bool MouseInput { get; private set; }

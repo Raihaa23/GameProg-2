@@ -23,23 +23,15 @@ namespace ManagersScripts
             player2Data.totalIntegrity = 0;
             player2Data.canDoAction = true;
         }
-
-        // private void ResetLevelData() // Reset Level Data
-        // {
-        //     levelData.timerChoice = 0;
-        //     levelData.levelChoice = null;
-        // }
-
+        
         private void OnEnable()
         {
-            GameEvents.OnResetPlayerData += ResetPlayerData;
-            // GameEvents.OnResetLevelData += ResetLevelData;
+            DataEvents.OnResetPlayerData += ResetPlayerData;
         }
 
         private void OnDisable()
         {
-            GameEvents.OnResetPlayerData -= ResetPlayerData;
-            // GameEvents.OnResetLevelData -= ResetLevelData;
+            DataEvents.OnResetPlayerData -= ResetPlayerData;
         }
     }
 }

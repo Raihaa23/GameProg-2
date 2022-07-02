@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 4522784280861712994}
   - component: {fileID: 4522784280861712995}
   - component: {fileID: 5432223764779850506}
+  - component: {fileID: -4702255970762215604}
   - component: {fileID: 4522784280861712993}
   - component: {fileID: 4522784280861712990}
   - component: {fileID: 4522784280861712991}
@@ -168,9 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputHandler: {fileID: 4522784280861712990}
-  movement: {fileID: 4522784280861712993}
-  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   ammoData: {fileID: 11400000, guid: 738a871a125101a4ca76faf262477268, type: 2}
+  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   totalAmmo: 2
   splitDebris: []
   debriSpawnLoc:
@@ -178,6 +178,21 @@ MonoBehaviour:
   - {fileID: 2790573339087642099}
   - {fileID: 861098194713295126}
   forceDirection: -1
+--- !u!114 &-4702255970762215604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4522784280861712986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52262da0281d14f41883e3f3bd86c73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: 4522784280861712990}
+  movement: {fileID: 4522784280861712993}
+  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
 --- !u!114 &4522784280861712993
 MonoBehaviour:
   m_ObjectHideFlags: 0
