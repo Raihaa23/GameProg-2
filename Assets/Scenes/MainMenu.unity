@@ -4132,7 +4132,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 259c6156c57c49d46920ffc6dd35090b, type: 2}
     - target: {fileID: 1739881299556530045, guid: 57b04f19e9d6fc944ada21167ab988a0, type: 3}
       propertyPath: nextStage
-      value: GreyBoxLevel
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 2985688885015824268, guid: 57b04f19e9d6fc944ada21167ab988a0, type: 3}
       propertyPath: m_Name
