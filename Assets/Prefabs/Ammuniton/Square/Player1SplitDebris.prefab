@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7211818216964238483}
   - component: {fileID: 2586099541001077470}
   - component: {fileID: 5608230530080146458}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Player1SplitDebris
   m_TagString: Player1SplitDebris
   m_Icon: {fileID: 0}

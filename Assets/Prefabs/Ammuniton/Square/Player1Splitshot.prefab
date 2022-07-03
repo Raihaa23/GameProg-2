@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 4262452237585005891}
   - component: {fileID: 5119171108550404833}
   - component: {fileID: 3178820590881830937}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Player1Splitshot
   m_TagString: Player1Splitshot
   m_Icon: {fileID: 0}

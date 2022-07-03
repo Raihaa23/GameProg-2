@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5288077715567545732}
   - component: {fileID: 7363759819530838547}
   - component: {fileID: 3452340213846665590}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Player1NPC
   m_TagString: Player1Destructible
   m_Icon: {fileID: 0}
@@ -223,3 +223,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destructibleData: {fileID: 11400000, guid: 853d10762e748db4a8a64e0a049bc065, type: 2}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  _currentHealth: 0
