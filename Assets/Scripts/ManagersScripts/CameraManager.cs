@@ -1,5 +1,4 @@
-﻿using System;
-using Cinemachine;
+﻿using Cinemachine;
 using UnityEngine;
 using Events;
 
@@ -16,38 +15,31 @@ namespace ManagersScripts
             ToggleCamera();
         }
 
-        private void Update()
+        private void ToggleCamera() // toggles the camera focus based on the current player turn
         {
-            Debug.Log(cvCamera.Follow);
-        }
-
-        private void ToggleCamera()
-        {
-            if (PlayerTurnManager.Instance.playerInTurnName == "Player1")
+            cvCamera.Follow = PlayerTurnManager.Instance.playerInTurnName switch
             {
-                cvCamera.Follow = player1Base;
-            }
-            else if (PlayerTurnManager.Instance.playerInTurnName == "Player2")
-            {
-                cvCamera.Follow = player2Base;
-            }
+                "Player1" => player1Base,
+                "Player2" => player2Base,
+                _ => cvCamera.Follow
+            };
         }
-        private void SetCamera(GameObject projectile)
+        private void SetCamera(GameObject projectile) // sets the camera focus on the projectile
         {
             cvCamera.Follow = projectile.transform;
 
         }
         private void OnEnable()
         {
-            GameEvents.OnSetCamera += SetCamera;
-            GameEvents.OnToggleCamera += ToggleCamera;
+            CameraEvents.OnSetCamera += SetCamera;
+            CameraEvents.OnToggleCamera += ToggleCamera;
 
         }
 
         private void OnDisable()
         {
-            GameEvents.OnSetCamera -= SetCamera;
-            GameEvents.OnToggleCamera -= ToggleCamera;
+            CameraEvents.OnSetCamera -= SetCamera;
+            CameraEvents.OnToggleCamera -= ToggleCamera;
 
         }
     }

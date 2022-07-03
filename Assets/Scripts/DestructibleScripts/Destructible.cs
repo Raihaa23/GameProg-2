@@ -1,5 +1,7 @@
 ﻿using Data;
 using Data.Destructibles;
+using Data.Player;
+using Events;
 using Interfaces;
 using UnityEngine;
 
@@ -9,7 +11,7 @@ namespace DestructibleScripts
     {
         [SerializeField] private DestructibleData destructibleData;
         [SerializeField] private PlayerData playerData;
-        private float _currentHealth;
+        [SerializeField] private float _currentHealth;
 
         private void Start()
         {
@@ -21,10 +23,15 @@ namespace DestructibleScripts
         public void Damage(float damageAmount) // Damages the Enemy NPC
         {
             _currentHealth -= damageAmount;
+            if (_currentHealth <0)
+            {
+                damageAmount += _currentHealth;
+            }
             playerData.currentIntegrity -= damageAmount;
+            DestructibleEvents.OnCalculateHpMethod();
             if (_currentHealth <= 0)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

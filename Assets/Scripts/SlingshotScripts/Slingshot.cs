@@ -1,19 +1,18 @@
-using Data;
+using Data.Player;
 using ManagersScripts;
 using UnityEngine;
-using Interfaces;
-using Events;
+
 
 namespace SlingshotScripts
 {
     public class Slingshot : MonoBehaviour
     {
-        [SerializeField] private SlingshotInputHandler inputHandler;
-        [SerializeField] private SlingshotMovement movement;
+        [SerializeField] protected InputHandler inputHandler;
+        [SerializeField] protected SlingshotMovement movement;
         [SerializeField] private PlayerData playerData;
-        private void Update()
+        
+        protected virtual void Update()
         {
-            CheckForBallReleaseAndRest();
             HandleShot();
         }
 
@@ -35,40 +34,7 @@ namespace SlingshotScripts
                 movement.CheckForBallRelease();
             }
         }
-        private void OnCollisionEnter2D(Collision2D other) //projectile collision
-        {
-            if (PlayerTurnManager.Instance.isProjectileReleased != true) return;
-            var enemyGameObj = other.gameObject;
-            if (other.gameObject.CompareTag(playerData.enemyDestructible))
-            {
-                var enemyScript = enemyGameObj.GetComponent<IDamageable>();
-                enemyScript?.Damage(50);
-            }
-        }
-
-        private void CheckForBallReleaseAndRest() // Checks if the ball is release and rested to end turn
-        {
-            if (movement.BallIsSleeping() && PlayerTurnManager.Instance.isProjectileReleased)
-            {
-                GameEvents.OnDestroyBallMethod();
-            }
-        }
-
-        private void DestroyBall() //destroys projectile 
-        {
-            playerData.equippedAmmo = null;
-            PlayerTurnManager.Instance.EndTurn();
-            Destroy(gameObject);
-        }
+       
         
-        private void OnEnable()
-        {
-            GameEvents.OnDestroyBall += DestroyBall;
-        }
-
-        private void OnDisable()
-        {
-            GameEvents.OnDestroyBall -= DestroyBall;
-        }
     }
 }
