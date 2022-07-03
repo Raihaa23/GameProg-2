@@ -24,9 +24,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Sky
   - Water
   - UI
+  - Back
+  - Background
+  - Mid
+  - Foreground
+  - Front
   - P1Destructible
   - P2Destructible
   - P1Ammunition
