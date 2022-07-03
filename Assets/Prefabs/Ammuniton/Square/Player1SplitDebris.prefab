@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4106954838576715895}
   - component: {fileID: 6463168530502754509}
   - component: {fileID: 7211818216964238483}
-  - component: {fileID: 2586099541001077470}
   - component: {fileID: 5608230530080146458}
-  m_Layer: 8
+  - component: {fileID: 2782520740317229731}
+  m_Layer: 13
   m_Name: Player1SplitDebris
   m_TagString: Player1SplitDebris
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962919211260951203}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: -0.16, z: 0}
   m_LocalScale: {x: 0.57142854, y: 0.57142854, z: 0.57142854}
   m_ConstrainProportionsScale: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 986054122, guid: 01d40a7d0a9f9824c8479697d3abc494, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,8 +108,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &2586099541001077470
-BoxCollider2D:
+--- !u!114 &5608230530080146458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962919211260951203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c212cd9adf844b193c9526041ea5a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  ammoData: {fileID: 11400000, guid: bc873bc50c7917f4daaff39c4a51601d, type: 2}
+--- !u!60 &2782520740317229731
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,20 +145,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &5608230530080146458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962919211260951203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c212cd9adf844b193c9526041ea5a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
-  ammoData: {fileID: 11400000, guid: bc873bc50c7917f4daaff39c4a51601d, type: 2}
+  m_Points:
+    m_Paths:
+    - - {x: -0.2029389, y: 0.24823472}
+      - {x: -0.19255096, y: -0.25212413}
+      - {x: 0.24195929, y: 0.0005916618}

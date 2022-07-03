@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7304392304973735658}
   - component: {fileID: 7304392304973735662}
   - component: {fileID: 7304392304973735663}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Player1Walls
   m_TagString: Player1Destructible
   m_Icon: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destructibleData: {fileID: 11400000, guid: 0738d5ebe43b4cd42bdaba3abaaf7b65, type: 2}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  _currentHealth: 0
 --- !u!50 &7304392304973735662
 Rigidbody2D:
   serializedVersion: 4
