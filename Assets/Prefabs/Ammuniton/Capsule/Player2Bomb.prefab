@@ -106,6 +106,7 @@ MonoBehaviour:
   inputHandler: {fileID: 180162469401208500}
   ammoData: {fileID: 11400000, guid: a504446a43092ed4682115f6e9d97ccd, type: 2}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
+  ammoName: Bomb
   totalAmmo: 1
   fieldOfImpact: 5
   force: 500

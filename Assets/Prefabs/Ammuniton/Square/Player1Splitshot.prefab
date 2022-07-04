@@ -171,6 +171,7 @@ MonoBehaviour:
   inputHandler: {fileID: 1980242696065634167}
   ammoData: {fileID: 11400000, guid: 738a871a125101a4ca76faf262477268, type: 2}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  ammoName: Split Shot
   totalAmmo: 2
   splitDebris: []
   debriSpawnLoc:

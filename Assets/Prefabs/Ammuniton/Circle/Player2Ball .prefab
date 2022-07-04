@@ -106,6 +106,7 @@ MonoBehaviour:
   inputHandler: {fileID: -2952479488888705117}
   ammoData: {fileID: 11400000, guid: 8e3797b5150411a4593b3f3065f01922, type: 2}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
+  ammoName: Stone
   totalAmmo: -1
 --- !u!114 &-762248609497295751
 MonoBehaviour:

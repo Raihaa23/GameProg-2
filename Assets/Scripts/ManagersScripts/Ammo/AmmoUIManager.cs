@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using Data.Player;
 using Events;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ManagersScripts.Ammo
 {
@@ -13,13 +15,11 @@ namespace ManagersScripts.Ammo
         [Header("UI References")]
         [SerializeField] private GameObject ammoButtons;
         [SerializeField] private TextMeshProUGUI ammoToText;
-
         private void Start()
         {
             ToggleAmmoButtons();
             ToggleAmmoText();
         }
-
         private void ToggleAmmoButtons() // Toggles UI Ammo Buttons
         {
             if (playerData.playerName != PlayerTurnManager.Instance.playerInTurnName) return;
@@ -33,7 +33,6 @@ namespace ManagersScripts.Ammo
                     break;
             }
         }
-        
         private void ToggleAmmoText() // Toggles UI Ammo text
         {
             if (playerData.playerName != PlayerTurnManager.Instance.playerInTurnName) return;
@@ -47,22 +46,19 @@ namespace ManagersScripts.Ammo
                     break;
             }
         }
-
-        public void UpdateAmmoText(int ammoLeft) // Updates the UI Ammo Text
+        public void UpdateAmmoText(int ammoLeft, string ammoName) // Updates the UI Ammo Text
         {
-            ammoToText.text = "Ammo: " + ammoLeft;
+            ammoToText.text = ammoName + ":\n" + ammoLeft;
             if (ammoLeft <= -1)
             {
-                ammoToText.text = "Ammo: Infinite";
-            }
+                ammoToText.text = ammoName + ":\n∞";
+            }            
         }
-
         private void OnEnable()
         {
             UIEvents.OnToggleAmmoButton += ToggleAmmoButtons;
             UIEvents.OnToggleAmmoText += ToggleAmmoText;
         }
-
         private void OnDisable()
         {
             UIEvents.OnToggleAmmoButton -= ToggleAmmoButtons;
