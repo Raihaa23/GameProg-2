@@ -3185,9 +3185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 3
-
-'
+  m_text: Jungle
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1775c29730120b47877a8d8a5f813fb, type: 2}
   m_sharedMaterial: {fileID: 4911580338947853684, guid: e1775c29730120b47877a8d8a5f813fb, type: 2}
@@ -4552,7 +4550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 4
+  m_text: Snowy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1775c29730120b47877a8d8a5f813fb, type: 2}
   m_sharedMaterial: {fileID: 4911580338947853684, guid: e1775c29730120b47877a8d8a5f813fb, type: 2}
@@ -8400,7 +8398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 2
+  m_text: 'Cave
 
 '
   m_isRightToLeft: 0
@@ -10191,9 +10189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 1
-
-'
+  m_text: Grassland
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1775c29730120b47877a8d8a5f813fb, type: 2}
   m_sharedMaterial: {fileID: 4911580338947853684, guid: e1775c29730120b47877a8d8a5f813fb, type: 2}
