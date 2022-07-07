@@ -1,8 +1,8 @@
 ﻿using Cinemachine;
-using UnityEngine;
 using Events;
+using UnityEngine;
 
-namespace ManagersScripts
+namespace ManagersScripts.CameraHandling
 {
     public class CameraManager : MonoBehaviour
     {
