@@ -9,6 +9,7 @@ namespace ManagersScripts.CameraHandling
         [SerializeField] private CinemachineVirtualCamera cvCamera;
         [SerializeField] private Transform player1Base;
         [SerializeField] private Transform player2Base;
+        
 
         private void Start()
         {
