@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -7965433632529134474}
   - component: {fileID: -5359692090716983051}
   - component: {fileID: 4854110594380275469}
-  - component: {fileID: 180162469401208500}
   - component: {fileID: 1542712141749213487}
   - component: {fileID: 7432833783511743067}
   - component: {fileID: 3738955716105690610}
@@ -103,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9191105bee1497883706b2d82ad2309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHandler: {fileID: 180162469401208500}
+  inputHandler: {fileID: 0}
   ammoData: {fileID: 11400000, guid: a504446a43092ed4682115f6e9d97ccd, type: 2}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   ammoName: Bomb
@@ -125,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52262da0281d14f41883e3f3bd86c73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHandler: {fileID: 180162469401208500}
+  inputHandler: {fileID: 0}
   movement: {fileID: 4854110594380275469}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
 --- !u!114 &4854110594380275469
@@ -142,18 +141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   maxDragDistance: 4
---- !u!114 &180162469401208500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8126855847574342263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab0567dac5d5b254ca88d4aa56e8f9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1542712141749213487
 Rigidbody2D:
   serializedVersion: 4

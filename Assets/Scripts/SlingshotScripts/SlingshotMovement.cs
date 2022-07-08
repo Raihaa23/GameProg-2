@@ -9,8 +9,6 @@ namespace SlingshotScripts
    public class SlingshotMovement : MonoBehaviour
    {
       [SerializeField] private PlayerData playerData;
-      
-      private RaycastHit2D _hit;
       private LineRenderer _line;
       private Vector2 _worldPosition;
       private string _temporaryTag;
@@ -45,10 +43,16 @@ namespace SlingshotScripts
 
       public void CheckForBall() //returns the tag of the projectile
       {
-         if (_hit.collider == null) return;
-         if (!_hit.collider.gameObject.CompareTag(playerData.equippedAmmo) || !_isDraggable) return;
+         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+         // Casts the ray and get the first game object hit
+         var hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+         Debug.Log(hit.collider.tag);
+         if (!hit.collider.CompareTag(playerData.equippedAmmo) || !_isDraggable) return;
          _temporaryTag = "BallTag";
          _rigidB.isKinematic = true;
+         CameraEvents.OnSwitchCameraPriorityMethod(1,0);
+         CameraEvents.OnToggleDraggableCameraMethod(false);
+         CameraEvents.OnForceReleaseMethod();
          UIEvents.OnToggleAmmoTextMethod();
          UIEvents.OnToggleAmmoButtonMethod();
          TimerEvents.OnPauseTurnTimerMethod();
@@ -97,9 +101,6 @@ namespace SlingshotScripts
          if (Camera.main == null) return;
          _worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
          _mouseToSlingDistance = Vector2.Distance(_worldPosition, _slingRb.position);
-         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-         // Casts the ray and get the first game object hit
-         _hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
       }
    
       private void LineRender() //renders the slingshot line

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 456274950639437014}
   - component: {fileID: -3372706847067451465}
   - component: {fileID: -4750498950228932897}
-  - component: {fileID: -2952479488888705117}
   - component: {fileID: 453141831238626774}
   - component: {fileID: 456274950639437015}
   - component: {fileID: 456274950639437000}
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -306583896, guid: 01d40a7d0a9f9824c8479697d3abc494, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0150088ce27548e5a44ad80443c27cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHandler: {fileID: -2952479488888705117}
+  inputHandler: {fileID: 0}
   ammoData: {fileID: 11400000, guid: 8e3797b5150411a4593b3f3065f01922, type: 2}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
   ammoName: Stone
@@ -120,21 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52262da0281d14f41883e3f3bd86c73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHandler: {fileID: -2952479488888705117}
+  inputHandler: {fileID: 0}
   movement: {fileID: 453141831238626774}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
---- !u!114 &-2952479488888705117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456274950639437004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab0567dac5d5b254ca88d4aa56e8f9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &453141831238626774
 MonoBehaviour:
   m_ObjectHideFlags: 0

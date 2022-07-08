@@ -56,6 +56,9 @@ namespace ManagersScripts
             }
             UIEvents.OnToggleAmmoTextMethod();
             UIEvents.OnToggleAmmoButtonMethod();
+            CameraEvents.OnSwitchCameraPriorityMethod(1,0);
+            CameraEvents.OnToggleDraggableCameraMethod(false);
+            CameraEvents.OnForceReleaseMethod();
             CameraEvents.OnToggleCameraMethod();
             AmmoEvents.OnLoadAmmoMethod();
         }

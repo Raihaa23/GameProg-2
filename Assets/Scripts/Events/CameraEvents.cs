@@ -23,5 +23,35 @@ namespace Events
                 OnToggleCamera();
             }
         }
+        
+        public delegate void SwitchCameraPriority(int cam1Priority, int cam2Priority);
+        public static event SwitchCameraPriority OnSwitchCameraPriority;
+        public static void OnSwitchCameraPriorityMethod(int cam1Priority, int cam2Priority)
+        {
+            if (OnSwitchCameraPriority != null)
+            {
+                OnSwitchCameraPriority(cam1Priority, cam2Priority);
+            }
+        }
+        
+        public delegate void ToggleDraggableCamera(bool camDragBool);
+        public static event ToggleDraggableCamera OnToggleDraggableCamera;
+        public static void OnToggleDraggableCameraMethod(bool camDragBool)
+        {
+            if (OnToggleDraggableCamera != null)
+            {
+                OnToggleDraggableCamera(camDragBool);
+            }
+        }
+        
+        public delegate void ForceRelease();
+        public static event ForceRelease OnForceRelease;
+        public static void OnForceReleaseMethod()
+        {
+            if (OnForceRelease != null)
+            {
+                OnForceRelease();
+            }
+        }
     }
 }

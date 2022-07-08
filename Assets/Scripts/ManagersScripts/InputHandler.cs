@@ -1,14 +1,16 @@
 using UnityEngine;
 
-namespace SlingshotScripts
+namespace ManagersScripts
 {
-    public class SlingshotInputHandler : MonoBehaviour
+    public class InputHandler : MonoBehaviour
     {
         public bool MouseInputDown { get; private set;}
         public bool MouseInput { get; private set; }
         public bool MouseInputUp { get; private set; }
         
         public bool SpaceBarDown { get; private set; }
+        
+        public bool EscapeDown { get; private set;}
 
         private void Update()
         {
@@ -16,6 +18,7 @@ namespace SlingshotScripts
             MouseInput = CheckMouseInput();
             MouseInputUp = CheckMouseInputUp();
             SpaceBarDown = CheckSpaceBarDown();
+            EscapeDown = CheckEscapeDown();
         }
 
         private bool CheckMouseInputDown() //returns input upon button click
@@ -34,6 +37,10 @@ namespace SlingshotScripts
         private bool CheckSpaceBarDown() // returns input when space bar is pressed
         {
             return Input.GetKeyDown(KeyCode.Space);
+        }
+        private bool CheckEscapeDown() //returns input upon button click
+        {
+            return Input.GetKeyDown(KeyCode.Escape);
         }
     }
 }

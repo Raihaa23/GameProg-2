@@ -7,7 +7,7 @@ namespace SlingshotScripts
 {
     public class Slingshot : MonoBehaviour
     {
-        [SerializeField] protected SlingshotInputHandler inputHandler;
+        [SerializeField] protected InputHandler inputHandler;
         [SerializeField] protected SlingshotMovement movement;
         [SerializeField] private PlayerData playerData;
         

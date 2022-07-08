@@ -11,7 +11,7 @@ namespace SlingshotScripts
 {
     public class Projectile : MonoBehaviour
     {
-        [SerializeField] protected SlingshotInputHandler inputHandler;
+        [SerializeField] protected InputHandler inputHandler;
         [SerializeField] protected AmmoData ammoData;
         [SerializeField] protected PlayerData playerData;
         public string ammoName;
