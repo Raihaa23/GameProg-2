@@ -3,6 +3,7 @@ using Data.Destructibles;
 using Data.Player;
 using Events;
 using Interfaces;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace DestructibleScripts
@@ -34,5 +35,18 @@ namespace DestructibleScripts
                 gameObject.SetActive(false);
             }
         }
+
+        private void OnCollisionEnter2D(Collision2D other) //projectile collision
+        {
+            if (!other.gameObject.layer.Equals(playerData.enemyAmmoLayer))
+            {
+                var impactForce = other.relativeVelocity.magnitude;
+                if (impactForce >= 4)
+                {
+                   Damage(impactForce * destructibleData.damageMultiplier);
+                }
+            }
+        }
+        
     }
 }

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: WoodenPlatform
   m_EditorClassIdentifier: 
   health: 20
+  damageMultiplier: 3

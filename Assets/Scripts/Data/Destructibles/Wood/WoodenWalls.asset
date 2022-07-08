@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: WoodenWalls
   m_EditorClassIdentifier: 
   health: 150
+  damageMultiplier: 3

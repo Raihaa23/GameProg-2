@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: P2TestObstacle
   m_EditorClassIdentifier: 
   health: 150
+  damageMultiplier: 3
