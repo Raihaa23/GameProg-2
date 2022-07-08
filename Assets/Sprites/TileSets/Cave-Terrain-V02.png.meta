@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8e7155a95b61e554dbb80f0a7440b0c9
+guid: 9e4902cd10cf1af408ffba3431f4a561
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cave-Terrain V02_0
+      name: Cave-Terrain-V02_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a01ba274b3f4c624fb6d8eb16cbc4d6e
-      internalID: 818973012
+      spriteID: 6d235c6ed6534424a9f226fdcecea3b3
+      internalID: 809126597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_1
+      name: Cave-Terrain-V02_1
       rect:
         serializedVersion: 2
         x: 128
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d8e2ec9aa927543807684608601f43
-      internalID: -1659254963
+      spriteID: 5256978d71e8dcf4ab09b37c803927cb
+      internalID: 1878481020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_2
+      name: Cave-Terrain-V02_2
       rect:
         serializedVersion: 2
         x: 256
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5bc28969631be04f9b59af388730f04
-      internalID: -364557042
+      spriteID: ac458934ef069034d95408d0d076e06b
+      internalID: 292321360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_3
+      name: Cave-Terrain-V02_3
       rect:
         serializedVersion: 2
         x: 512
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 059d27d6bd586984c86019d4d177f545
-      internalID: -1896064774
+      spriteID: 1fc161d30611612409ecb93f96860553
+      internalID: -1682862084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_4
+      name: Cave-Terrain-V02_4
       rect:
         serializedVersion: 2
         x: 640
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef9db7c26bd936740a360248fde5115d
-      internalID: 1432272431
+      spriteID: e900fb7059b1fad4899905ec1b2c77e1
+      internalID: -1849078126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_5
+      name: Cave-Terrain-V02_5
       rect:
         serializedVersion: 2
         x: 0
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d365bc868c96b88418ec9773348290fc
-      internalID: 1528628015
+      spriteID: 1a856f498ff9ceb4a95a496e34b89cd9
+      internalID: -1249375476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_6
+      name: Cave-Terrain-V02_6
       rect:
         serializedVersion: 2
         x: 128
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9bb521ad32c88c4bab7b0f0effc29c0
-      internalID: 249802134
+      spriteID: 070c21b0c6e8c284c8797a7427dd0b31
+      internalID: -1225713070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_7
+      name: Cave-Terrain-V02_7
       rect:
         serializedVersion: 2
         x: 256
@@ -265,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20bea77792a22df4583e19cfa5b9d7ff
-      internalID: -1420546768
+      spriteID: 09cf0426f31de6144a629f2a4bbf99b6
+      internalID: 682201839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_8
+      name: Cave-Terrain-V02_8
       rect:
         serializedVersion: 2
         x: 512
@@ -286,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a77b34fc9f78ad642a07e7a2d9450542
-      internalID: -62159212
+      spriteID: a3ad0692aec63e74199c4e91c31b4de7
+      internalID: -1136653783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_9
+      name: Cave-Terrain-V02_9
       rect:
         serializedVersion: 2
         x: 640
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b93c6f2fca1d5f047a60f9cad6bbafee
-      internalID: -340044067
+      spriteID: 17aae2bb60bc8d041b2f8c1f1a0d6458
+      internalID: -846544169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_10
+      name: Cave-Terrain-V02_10
       rect:
         serializedVersion: 2
         x: 0
@@ -328,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 930f1d746b0f2024e8e47fe5876b6021
-      internalID: 958057885
+      spriteID: 771ccb4cb3f40c943b3c7dc8dc2d504b
+      internalID: -1715268054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_11
+      name: Cave-Terrain-V02_11
       rect:
         serializedVersion: 2
         x: 128
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3380cbf11e95ce42ba92aba838da541
-      internalID: 1636835792
+      spriteID: eb5b073e6cf4bf74caf078359438d36f
+      internalID: -1290215531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cave-Terrain V02_12
+      name: Cave-Terrain-V02_12
       rect:
         serializedVersion: 2
         x: 256
@@ -370,8 +370,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7bf49febc0401d4c9ec2977e4fb0ef7
-      internalID: 224840149
+      spriteID: 7c3f70c28241d724bb25eaab1fd69dbe
+      internalID: -147776563
       vertices: []
       indices: 
       edges: []
@@ -387,19 +387,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cave-Terrain V02_7: -1420546768
-      Cave-Terrain V02_10: 958057885
-      Cave-Terrain V02_0: 818973012
-      Cave-Terrain V02_11: 1636835792
-      Cave-Terrain V02_8: -62159212
-      Cave-Terrain V02_4: 1432272431
-      Cave-Terrain V02_9: -340044067
-      Cave-Terrain V02_12: 224840149
-      Cave-Terrain V02_5: 1528628015
-      Cave-Terrain V02_2: -364557042
-      Cave-Terrain V02_6: 249802134
-      Cave-Terrain V02_3: -1896064774
-      Cave-Terrain V02_1: -1659254963
+      Cave-Terrain-V02_4: -1849078126
+      Cave-Terrain-V02_7: 682201839
+      Cave-Terrain-V02_3: -1682862084
+      Cave-Terrain-V02_8: -1136653783
+      Cave-Terrain-V02_2: 292321360
+      Cave-Terrain-V02_12: -147776563
+      Cave-Terrain-V02_9: -846544169
+      Cave-Terrain-V02_10: -1715268054
+      Cave-Terrain-V02_6: -1225713070
+      Cave-Terrain-V02_5: -1249375476
+      Cave-Terrain-V02_1: 1878481020
+      Cave-Terrain-V02_0: 809126597
+      Cave-Terrain-V02_11: -1290215531
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
