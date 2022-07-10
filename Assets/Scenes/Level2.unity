@@ -994,7 +994,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2059227169}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &167997980
 SpriteRenderer:
@@ -16740,8 +16740,8 @@ RectTransform:
   - {fileID: 45905333}
   - {fileID: 2074840341}
   - {fileID: 1805613849}
-  - {fileID: 1738771084}
   - {fileID: 167997979}
+  - {fileID: 1738771084}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
