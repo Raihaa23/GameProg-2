@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using System;
+using Data;
 using Data.Destructibles;
 using Data.Player;
 using Events;
@@ -23,12 +24,12 @@ namespace DestructibleScripts
 
         public void Damage(float damageAmount) // Damages the Enemy NPC
         {
-            _currentHealth -= damageAmount;
+            _currentHealth -= Mathf.Round(damageAmount);
             if (_currentHealth <0)
             {
                 damageAmount += _currentHealth;
             }
-            playerData.currentIntegrity -= damageAmount;
+            playerData.currentIntegrity -= Mathf.Clamp(damageAmount, 0, playerData.currentIntegrity);
             DestructibleEvents.OnCalculateHpMethod();
             if (_currentHealth <= 0)
             {
@@ -43,7 +44,7 @@ namespace DestructibleScripts
                 var impactForce = other.relativeVelocity.magnitude;
                 if (impactForce >= 4)
                 {
-                   Damage(impactForce * destructibleData.damageMultiplier);
+                   Damage(Mathf.Round(impactForce * destructibleData.damageMultiplier));
                 }
             }
         }
