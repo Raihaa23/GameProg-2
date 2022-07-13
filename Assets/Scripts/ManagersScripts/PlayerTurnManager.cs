@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using Data;
-using Data.Player;
-using Events;
+﻿using Events;
 using UnityEngine;
 
 
