@@ -140,6 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
+  slingRubber:
+  - {fileID: 0}
+  - {fileID: 0}
   maxDragDistance: 4
 --- !u!50 &1542712141749213487
 Rigidbody2D:
