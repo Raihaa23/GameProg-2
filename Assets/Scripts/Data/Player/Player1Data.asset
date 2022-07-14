@@ -14,11 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Player1
   enemyDestructible: Player2Destructible
+  enemyAmmoLayer: 14
   equippedAmmo: 
-  ammoIndex: 0
-  totalIntegrity: 0
-  currentIntegrity: 0
-  ammoList:
-  - {fileID: 456274950639437004, guid: 3ee16206b29571b47a3d5ed834122e9a, type: 3}
-  - {fileID: 8428719658700831998, guid: 37861af64d477c142b1f1e8d1f8accfb, type: 3}
-  - {fileID: 4624642761799106978, guid: 49c124848d8516c45aeba9082072767f, type: 3}
+  totalIntegrity: 1650
+  currentIntegrity: 1650
+  canDoAction: 0

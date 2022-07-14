@@ -11,7 +11,7 @@ namespace SlingshotScripts
 {
     public class Projectile : MonoBehaviour
     {
-        [SerializeField] protected SlingshotInputHandler inputHandler;
+        [SerializeField] protected InputHandler inputHandler;
         [SerializeField] protected AmmoData ammoData;
         [SerializeField] protected PlayerData playerData;
         public string ammoName;
@@ -25,7 +25,7 @@ namespace SlingshotScripts
                 var impactForce = other.relativeVelocity.magnitude;
                 var enemyGameObj = other.gameObject;
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
-                enemyScript?.Damage(ammoData.damageMultiplier * impactForce);
+                enemyScript?.Damage(Mathf.Round(ammoData.damageMultiplier * impactForce));
             }
             MatchEvents.OnCountToEndMethod();
         }

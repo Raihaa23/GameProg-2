@@ -8,7 +8,7 @@ namespace ManagersScripts.Pause
 {
     public class PauseManager : MonoBehaviour
     {
-        [SerializeField] private PauseInputHandler inputHandler;
+        [SerializeField] private InputHandler inputHandler;
         [SerializeField] private PauseUI ui;
         private bool _isPaused;
 

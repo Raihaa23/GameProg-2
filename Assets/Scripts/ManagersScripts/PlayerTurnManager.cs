@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using Data;
-using Data.Player;
-using Events;
+﻿using Events;
 using UnityEngine;
 
 
@@ -56,6 +52,9 @@ namespace ManagersScripts
             }
             UIEvents.OnToggleAmmoTextMethod();
             UIEvents.OnToggleAmmoButtonMethod();
+            CameraEvents.OnSwitchCameraPriorityMethod(1,0);
+            CameraEvents.OnToggleDraggableCameraMethod(false);
+            CameraEvents.OnForceReleaseMethod();
             CameraEvents.OnToggleCameraMethod();
             AmmoEvents.OnLoadAmmoMethod();
         }
