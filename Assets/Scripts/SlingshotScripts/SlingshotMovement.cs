@@ -35,6 +35,7 @@ namespace SlingshotScripts
          {
             rubber.ChangeSlingRubberProjectile(gameObject.transform);
             rubber.EnableSlingRubber();
+            Debug.Log("PassValue");
          }
          
          _rigidB = GetComponent<Rigidbody2D>();

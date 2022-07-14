@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -306583896, guid: 01d40a7d0a9f9824c8479697d3abc494, type: 3}
+  m_Sprite: {fileID: -2024137545, guid: 88681167ba1efed438477760e2b5fe0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  slingRubber: []
   maxDragDistance: 6
 --- !u!50 &456274950639437015
 Rigidbody2D:
@@ -190,6 +191,6 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.54418325
+  m_Distance: 15.376023
   m_DampingRatio: 0
   m_Frequency: 1
