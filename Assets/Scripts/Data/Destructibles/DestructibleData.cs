@@ -6,5 +6,6 @@ namespace Data.Destructibles
     public class DestructibleData : ScriptableObject
     {
         public float health = 50;
+        public float damageMultiplier;
     }
 }

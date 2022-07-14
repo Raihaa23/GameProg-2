@@ -7,6 +7,7 @@ namespace Data.Player
     {
         public string playerName;
         public string enemyDestructible;
+        public int enemyAmmoLayer;
         public string equippedAmmo;
 
         public float totalIntegrity;

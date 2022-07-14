@@ -18,7 +18,7 @@ namespace SlingshotScripts.AmmoTypes
                 var impactForce = other.relativeVelocity.magnitude;
                 var enemyGameObj = other.gameObject;
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
-                enemyScript?.Damage(ammoData.damageMultiplier * impactForce);
+                enemyScript?.Damage(Mathf.Round(ammoData.damageMultiplier * impactForce));
             }
             MatchEvents.OnCountToEndMethod();
         }

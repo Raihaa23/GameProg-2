@@ -20,6 +20,7 @@ TagManager:
   - Player2Bomb
   - Player1SplitDebris
   - Player2SplitDebris
+  - DragConfiner
   layers:
   - Default
   - TransparentFX
@@ -53,12 +54,25 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1209016919
+    locked: 0
+  - name: Forground
+    uniqueID: 2141390879
+    locked: 0
+  - name: Environment
+    uniqueID: 827447009
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Destructible
+    uniqueID: 3269702593
+    locked: 0
+  - name: Player
+    uniqueID: 527015387
+    locked: 0
+  - name: Ammunition
+    uniqueID: 872231289
     locked: 0
