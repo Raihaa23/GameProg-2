@@ -1,9 +1,11 @@
-﻿using Data.Ammo;
+﻿using System;
+using Data.Ammo;
 using Data.Player;
 using Events;
 using Interfaces;
 using ManagersScripts;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SlingshotScripts
 {
@@ -12,7 +14,9 @@ namespace SlingshotScripts
         [SerializeField] protected InputHandler inputHandler;
         [SerializeField] protected AmmoData ammoData;
         [SerializeField] protected PlayerData playerData;
+        public string ammoName;
         public int totalAmmo;
+
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
             if (PlayerTurnManager.Instance.isProjectileReleased != true) return;
@@ -21,7 +25,7 @@ namespace SlingshotScripts
                 var impactForce = other.relativeVelocity.magnitude;
                 var enemyGameObj = other.gameObject;
                 var enemyScript = enemyGameObj.GetComponent<IDamageable>();
-                enemyScript?.Damage(ammoData.damageMultiplier * impactForce);
+                enemyScript?.Damage(Mathf.Round(ammoData.damageMultiplier * impactForce));
             }
             MatchEvents.OnCountToEndMethod();
         }

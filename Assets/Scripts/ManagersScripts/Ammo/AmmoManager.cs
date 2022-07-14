@@ -1,8 +1,11 @@
+using System;
 using System.Collections.Generic;
 using Data.Player;
 using Events;
 using SlingshotScripts;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ManagersScripts.Ammo
 {
@@ -19,7 +22,6 @@ namespace ManagersScripts.Ammo
         [SerializeField] private int ammoLeft = 0;
         [SerializeField] private int ammoIndex;
         [SerializeField] private List<GameObject> ammoList = new List<GameObject>();
-        
 
         private void Start()
         {
@@ -32,7 +34,8 @@ namespace ManagersScripts.Ammo
             currentAmmo = ammoList[ammoIndex];
             var projectile = currentAmmo.GetComponent<Projectile>();
             ammoLeft = projectile.totalAmmo;
-            ammoUI.UpdateAmmoText(ammoLeft);
+            var ammoName = currentAmmo.GetComponent<Projectile>().ammoName;
+            ammoUI.UpdateAmmoText(ammoLeft, ammoName);
             currentAmmo.transform.position = origin.position;
             currentAmmo.GetComponent<SpringJoint2D>().connectedBody = originRigidBody2D;
             playerData.equippedAmmo = currentAmmo.tag;

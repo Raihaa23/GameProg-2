@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: P1NPC
   m_EditorClassIdentifier: 
   health: 50
+  damageMultiplier: 6

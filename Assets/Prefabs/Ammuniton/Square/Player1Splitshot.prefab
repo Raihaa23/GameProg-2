@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 1262010244353774033}
   - component: {fileID: -7298212541811473505}
   - component: {fileID: 7182000897930489017}
-  - component: {fileID: 1980242696065634167}
   - component: {fileID: 4262452237585005891}
   - component: {fileID: 3178820590881830937}
   - component: {fileID: 4079825405741128386}
@@ -168,9 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbd08ad11a34e17b6b1e3b5c896bce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHandler: {fileID: 1980242696065634167}
+  inputHandler: {fileID: 0}
   ammoData: {fileID: 11400000, guid: 738a871a125101a4ca76faf262477268, type: 2}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  ammoName: Split Shot
   totalAmmo: 2
   splitDebris: []
   debriSpawnLoc:
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52262da0281d14f41883e3f3bd86c73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHandler: {fileID: 1980242696065634167}
+  inputHandler: {fileID: 0}
   movement: {fileID: 7182000897930489017}
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
 --- !u!114 &7182000897930489017
@@ -207,18 +207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
   maxDragDistance: 4
---- !u!114 &1980242696065634167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428719658700831998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab0567dac5d5b254ca88d4aa56e8f9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &4262452237585005891
 Rigidbody2D:
   serializedVersion: 4
