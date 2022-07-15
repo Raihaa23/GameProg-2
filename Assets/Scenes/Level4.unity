@@ -1039,7 +1039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3152732138733015564, guid: c050c8b8dc9fa5d49b5c85005c8d116a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3152732138733015565, guid: c050c8b8dc9fa5d49b5c85005c8d116a, type: 3}
       propertyPath: m_RootOrder
@@ -1047,11 +1047,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3152732138733015565, guid: c050c8b8dc9fa5d49b5c85005c8d116a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4
+      value: -27.2
       objectReference: {fileID: 0}
     - target: {fileID: 3152732138733015565, guid: c050c8b8dc9fa5d49b5c85005c8d116a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28
+      value: -5.6
       objectReference: {fileID: 0}
     - target: {fileID: 3152732138733015565, guid: c050c8b8dc9fa5d49b5c85005c8d116a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6112,6 +6112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cvCamera: {fileID: 858840947}
+  draggableCamera: {fileID: 0}
   player1Base: {fileID: 330026370}
   player2Base: {fileID: 1972029478}
 --- !u!4 &1818564058
