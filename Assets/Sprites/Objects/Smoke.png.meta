@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2b0a0b6522bad3945bac393983ee4e9a
+guid: 6396612014c18fc4684da433cfee5021
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,64 +104,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Explosion_0
+      name: Smoke_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 148
-        height: 148
+        width: 82
+        height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 243e15e2cca18684ca625d821ca200b3
-      internalID: 1419195467
+      spriteID: d87a065ab8edee745a089e10807f84ed
+      internalID: -970104805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_1
+      name: Smoke_1
       rect:
         serializedVersion: 2
-        x: 148
+        x: 82
         y: 0
-        width: 148
-        height: 148
+        width: 82
+        height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5ef5e19344efa342abc1ae889e5cbbe
-      internalID: -1878874091
+      spriteID: 89e19306de2572246add6400b34e15d2
+      internalID: -538802256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_2
+      name: Smoke_2
       rect:
         serializedVersion: 2
-        x: 296
+        x: 164
         y: 0
-        width: 148
-        height: 148
+        width: 82
+        height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb795b6c7c3b19945ac1132a839de4cc
-      internalID: 146983905
+      spriteID: 76e381452e04cd64d846979b4f799c39
+      internalID: 1397137948
       vertices: []
       indices: 
       edges: []
@@ -177,9 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Explosion_1: -1878874091
-      Explosion_2: 146983905
-      Explosion_0: 1419195467
+      Smoke_1: -538802256
+      Smoke_2: 1397137948
+      Smoke_0: -970104805
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
