@@ -5,7 +5,12 @@ public static class StringKeys
         //BGM
         public const string TestBGM = "LendMeYourVoice";
         //SFX
-        public const string TestSfx = "DropletSFX";
+        public const string TestSfx = "DropletSFX",
+                            explosion = "Explosion",
+                            splitEffect = "Split Effect",
+                            slingStretch = "Slingshot Stretch",
+                            launchAmmo = "Laucnh Ammo";
+                                            
 
         #endregion
         

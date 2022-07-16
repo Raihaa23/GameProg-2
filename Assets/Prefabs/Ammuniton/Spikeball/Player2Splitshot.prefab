@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 4522784280861712991}
   - component: {fileID: 4522784280861712989}
   - component: {fileID: 7866856777411261537}
+  - component: {fileID: 2033218046712696513}
   m_Layer: 14
   m_Name: Player2Splitshot
   m_TagString: Player2Splitshot
@@ -206,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
+  slingRubber: []
   maxDragDistance: 4
 --- !u!50 &4522784280861712991
 Rigidbody2D:
@@ -264,6 +266,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
+--- !u!95 &2033218046712696513
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4522784280861712986}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41f74b6e224f4574b97c2c58a2f0d892, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5272955033658337731
 GameObject:
   m_ObjectHideFlags: 0
