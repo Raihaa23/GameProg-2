@@ -441,6 +441,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2219485860424939353, guid: 3efe77657ec97e444b3fbce52c7827a0, type: 3}
+        m_TargetAssemblyTypeName: ManagersScripts.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Button
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &45042510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1068,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 241598294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2219485860424939353, guid: 3efe77657ec97e444b3fbce52c7827a0, type: 3}
+        m_TargetAssemblyTypeName: ManagersScripts.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Button
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1739881299556530045, guid: 57b04f19e9d6fc944ada21167ab988a0, type: 3}
+        m_TargetAssemblyTypeName: ManagersScripts.SceneHandler, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &241598294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2268,7 +2304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 101f63ce4ae4ea44e852444a7ab034ea, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3961,7 +3997,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: b895f69bf780b33439fbe29a5677f980, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5038,6 +5074,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2219485860424939353, guid: 3efe77657ec97e444b3fbce52c7827a0, type: 3}
+        m_TargetAssemblyTypeName: ManagersScripts.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DropletSFX
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1328761831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5134,7 +5182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 71b0300d15bbc284d992909ad07a32c3, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5477,7 +5525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: a6549626e6626dd44b8899b77f571e58, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -6737,7 +6785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: dd0486de34b6cfb43bf115d37c8d229a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

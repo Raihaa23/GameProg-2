@@ -58,6 +58,7 @@ namespace ManagersScripts.Audio
         {
             int index = sfxAudioClip.FindIndex(i => i.name == clipName);
             sfxAudioSource.PlayOneShot(sfxAudioClip[index]);
+            Debug.Log(clipName);
         }
         
         public void PlayIntroBGM(int index)

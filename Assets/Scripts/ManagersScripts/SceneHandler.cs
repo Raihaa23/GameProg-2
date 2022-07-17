@@ -28,5 +28,10 @@ namespace ManagersScripts
             SceneManager.LoadScene(levelData.levelChoice);
             AmmoEvents.OnLoadAmmoMethod();
         }
+
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
     }
 }
