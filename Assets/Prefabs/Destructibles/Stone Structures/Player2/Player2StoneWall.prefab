@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7501066664233599581}
   - component: {fileID: 7501066664233599580}
   - component: {fileID: 7501066664233599579}
+  - component: {fileID: 9092183263381990148}
   m_Layer: 12
   m_Name: Player2StoneWall
   m_TagString: Player2Destructible
@@ -149,3 +150,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0380745, y: 0.20807528}
   m_EdgeRadius: 0
+--- !u!114 &9092183263381990148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501066664233599578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c69be80e3346389694947c8240a636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructibleData: {fileID: 11400000, guid: bfb4737fcef54584cbb6cfdee3378be5, type: 2}
+  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
+  _currentHealth: 0
+  lowHealthSprite: {fileID: 259406994, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}

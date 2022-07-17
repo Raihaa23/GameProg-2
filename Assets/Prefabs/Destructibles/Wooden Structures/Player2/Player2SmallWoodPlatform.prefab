@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7427550018121002649}
   - component: {fileID: 7427550018121002648}
   - component: {fileID: 7427550018121002655}
-  - component: {fileID: 7427550018121002654}
   m_Layer: 12
   m_Name: Player2SmallWoodPlatform
   m_TagString: Player2
@@ -134,18 +133,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7427550018121002654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7427550018121002653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cec72cc8944680b9a0ed824a689593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructibleData: {fileID: 11400000, guid: a90b0a585e896524587fa94528e2231a, type: 2}
-  playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
-  _currentHealth: 0

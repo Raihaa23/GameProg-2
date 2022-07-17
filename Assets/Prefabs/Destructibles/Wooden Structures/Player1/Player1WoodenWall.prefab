@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2521782223590169921}
   - component: {fileID: 2521782223590169926}
-  - component: {fileID: 2521782223590169927}
   - component: {fileID: 1528059064686191284}
   - component: {fileID: 1368643742187894518}
+  - component: {fileID: 629247328464692040}
   m_Layer: 11
   m_Name: Player1WoodenWall
   m_TagString: Player1Destructible
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2521782223590169927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2521782223590169924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cec72cc8944680b9a0ed824a689593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destructibleData: {fileID: 11400000, guid: 821f21acc94ce3248a266a301c972ce7, type: 2}
-  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
-  _currentHealth: 0
 --- !u!50 &1528059064686191284
 Rigidbody2D:
   serializedVersion: 4
@@ -149,3 +134,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84, y: 0.20755476}
   m_EdgeRadius: 0
+--- !u!114 &629247328464692040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2521782223590169924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c69be80e3346389694947c8240a636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructibleData: {fileID: 11400000, guid: 821f21acc94ce3248a266a301c972ce7, type: 2}
+  playerData: {fileID: 11400000, guid: 98d5c56dccbf48a4d97f5ea199dce7a4, type: 2}
+  _currentHealth: 0
+  lowHealthSprite: {fileID: 1197980258, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}

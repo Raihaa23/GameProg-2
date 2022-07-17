@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4429270040780521524}
   - component: {fileID: -4654874822133973854}
   - component: {fileID: 5757457583866150074}
-  - component: {fileID: 7192596517524742563}
+  - component: {fileID: 3756328752063752016}
   m_Layer: 12
   m_Name: P2Soldier
   m_TagString: Player2Destructible
@@ -155,7 +155,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7192596517524742563
+--- !u!114 &3756328752063752016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4429270040780521527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cec72cc8944680b9a0ed824a689593, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf745f5cd3d4bcc84e9e881c6f2af85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destructibleData: {fileID: 11400000, guid: 893a90d4e7053c34d978a505d4954873, type: 2}

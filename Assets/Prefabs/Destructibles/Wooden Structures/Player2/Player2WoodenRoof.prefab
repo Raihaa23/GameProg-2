@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3767752020028620763}
   - component: {fileID: 3767752020028620762}
   - component: {fileID: 3767752020028620757}
-  - component: {fileID: 3767752020028620756}
+  - component: {fileID: 1322839881143202996}
   m_Layer: 12
   m_Name: Player2WoodenRoof
   m_TagString: Player2Destructible
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.69, y: 0.21}
   m_EdgeRadius: 0
---- !u!114 &3767752020028620756
+--- !u!114 &1322839881143202996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3767752020028620758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cec72cc8944680b9a0ed824a689593, type: 3}
+  m_Script: {fileID: 11500000, guid: 86c69be80e3346389694947c8240a636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destructibleData: {fileID: 11400000, guid: f0fbeef088e5b6447a436718368f7eaf, type: 2}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   _currentHealth: 0
+  lowHealthSprite: {fileID: 2001493694, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}

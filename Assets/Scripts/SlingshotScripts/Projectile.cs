@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using Data.Ammo;
 using Data.Player;
 using Events;
 using Interfaces;
 using ManagersScripts;
+using ManagersScripts.Audio;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,10 +18,20 @@ namespace SlingshotScripts
         [SerializeField] protected PlayerData playerData;
         public string ammoName;
         public int totalAmmo;
+        private bool isRunning = false;
+        private bool canPlay = true;
 
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
             if (PlayerTurnManager.Instance.isProjectileReleased != true) return;
+            
+            if (canPlay)
+            {
+                AudioManager.Instance.PlaySFX(StringKeys.ImpactSfx);
+                canPlay = false;
+                StartCoroutine(SFXIntervalRate());
+            }
+            
             if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
                 var impactForce = other.relativeVelocity.magnitude;
@@ -28,6 +40,17 @@ namespace SlingshotScripts
                 enemyScript?.Damage(Mathf.Round(ammoData.damageMultiplier * impactForce));
             }
             MatchEvents.OnCountToEndMethod();
+        }
+        
+        private IEnumerator SFXIntervalRate()
+        {
+            if (!isRunning)
+            {
+                isRunning = true;
+                yield return new WaitForSeconds(0.5f);
+                canPlay = true;
+                isRunning = false;
+            }
         }
         private void UnfreezeConstraints()
         {

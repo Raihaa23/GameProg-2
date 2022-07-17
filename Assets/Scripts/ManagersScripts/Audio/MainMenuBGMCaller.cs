@@ -7,7 +7,7 @@ namespace ManagersScripts.Audio
     {
         private void Start()
         {
-            AudioManager.Instance.PlayBGM(StringKeys.TestBGM);
+            AudioManager.Instance.PlayBGM(StringKeys.MainMenuBGM);
         }
     }
 }

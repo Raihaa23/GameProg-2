@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Events;
 using SlingshotScripts;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ManagersScripts.Pause
 {
@@ -10,6 +11,7 @@ namespace ManagersScripts.Pause
     {
         [SerializeField] private InputHandler inputHandler;
         [SerializeField] private PauseUI ui;
+        [SerializeField] private GameObject invisibleWall;
         private bool _isPaused;
 
         private void Start()
@@ -39,6 +41,7 @@ namespace ManagersScripts.Pause
 
         public void PauseGame()
         {
+            invisibleWall.SetActive(true);
             Time.timeScale = 0;
             ui.TogglePauseUI(true);
             _isPaused = true;
@@ -46,6 +49,7 @@ namespace ManagersScripts.Pause
 
         public void ResumeGame()
         {
+            invisibleWall.SetActive(false);
             Time.timeScale = 1;
             ui.TogglePauseUI(false);
             _isPaused = false;

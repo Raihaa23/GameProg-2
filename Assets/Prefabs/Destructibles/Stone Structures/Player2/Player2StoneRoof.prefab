@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2496676263464748389}
   - component: {fileID: 2496676263464748385}
   - component: {fileID: 2496676263464748384}
-  - component: {fileID: 2496676263464748387}
+  - component: {fileID: 665079699754931183}
   m_Layer: 12
   m_Name: Player2StoneRoof
   m_TagString: Player2Destructible
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.67, y: 0.21435516}
   m_EdgeRadius: 0
---- !u!114 &2496676263464748387
+--- !u!114 &665079699754931183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2496676263464748388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cec72cc8944680b9a0ed824a689593, type: 3}
+  m_Script: {fileID: 11500000, guid: 86c69be80e3346389694947c8240a636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destructibleData: {fileID: 11400000, guid: 14fc6657e1181864884c14d596bfb197, type: 2}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   _currentHealth: 0
+  lowHealthSprite: {fileID: 586295580, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}

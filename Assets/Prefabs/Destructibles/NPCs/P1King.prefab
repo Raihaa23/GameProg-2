@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5268603695352143979}
   - component: {fileID: -7777487664205692217}
   - component: {fileID: -1158894160505950236}
-  - component: {fileID: -8550503491199886977}
+  - component: {fileID: -5409521697718704414}
   m_Layer: 11
   m_Name: P1King
   m_TagString: Player1Destructible
@@ -155,7 +155,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78, y: 1.14}
   m_EdgeRadius: 0
---- !u!114 &-8550503491199886977
+--- !u!114 &-5409521697718704414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5268603695352143980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cec72cc8944680b9a0ed824a689593, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf745f5cd3d4bcc84e9e881c6f2af85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destructibleData: {fileID: 11400000, guid: 179da3d93016e834080fb43114da6843, type: 2}

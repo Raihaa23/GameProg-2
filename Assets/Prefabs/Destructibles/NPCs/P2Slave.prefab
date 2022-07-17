@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4306220330129248596}
   - component: {fileID: -6632285758524322036}
   - component: {fileID: 3960204614286114479}
-  - component: {fileID: 5475337017652760555}
+  - component: {fileID: -3804910355601904555}
   m_Layer: 12
   m_Name: P2Slave
   m_TagString: Player2Destructible
@@ -155,7 +155,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78, y: 1.04}
   m_EdgeRadius: 0
---- !u!114 &5475337017652760555
+--- !u!114 &-3804910355601904555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4306220330129248597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cec72cc8944680b9a0ed824a689593, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf745f5cd3d4bcc84e9e881c6f2af85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destructibleData: {fileID: 11400000, guid: 64f2b6664014bca4783779f36e72a0c9, type: 2}
