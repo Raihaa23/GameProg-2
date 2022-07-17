@@ -18,7 +18,7 @@ namespace ManagersScripts.Health
         public void UpdateIntegrityUI(float integrityInPercent) // updates the health/integrity UI
         {
             slider.value = integrityInPercent;
-            // textDisplay.text = integrityInPercent.ToString("f2") + "%";
+            
         }
         
     }

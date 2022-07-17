@@ -20,10 +20,8 @@ namespace Timers
         {
             if (!_isRunning)
             {
-                Debug.Log("initialize countdown");
                 _isRunning = true;
                 yield return new WaitForSeconds(5);
-                Debug.Log("Next Turn");
                 AmmoEvents.OnDestroyAmmoMethod();
                 PlayerTurnManager.Instance.EndTurn();
                 _isRunning = false;

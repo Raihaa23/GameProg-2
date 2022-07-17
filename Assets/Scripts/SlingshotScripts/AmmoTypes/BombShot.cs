@@ -3,6 +3,7 @@ using Events;
 using Interfaces;
 using UnityEngine;
 using ManagersScripts;
+using ManagersScripts.Audio;
 
 namespace SlingshotScripts.AmmoTypes
 {
@@ -30,6 +31,9 @@ namespace SlingshotScripts.AmmoTypes
 
         private void Explode() // action
         {
+            AudioManager.Instance.PlaySFX(StringKeys.ExplosionSfx);
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            GetComponent<Animator>().SetTrigger(StringKeys.ExplosionAnim);
            Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, layerToHit);
 
            foreach (var obj in objects)
@@ -40,7 +44,7 @@ namespace SlingshotScripts.AmmoTypes
                enemyScript?.Damage(ammoData.specialDamage);
            }
            MatchEvents.OnCountToEndMethod();
-           AmmoEvents.OnDestroyAmmoMethod();
+           
         }
         
         private void OnDrawGizmosSelected()

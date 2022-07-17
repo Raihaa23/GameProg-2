@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Events;
 using UnityEngine;
 using ManagersScripts;
+using ManagersScripts.Audio;
 using Unity.VisualScripting;
 
 namespace SlingshotScripts.AmmoTypes
@@ -32,6 +33,8 @@ namespace SlingshotScripts.AmmoTypes
 
         private void SplitIntoDebris() // action
         {
+            AudioManager.Instance.PlaySFX(StringKeys.SplitEffectSfx);
+            GetComponent<CircleCollider2D>().enabled = false;
             foreach (var debris in splitDebris)
             {
                 debris.transform.position = debriSpawnLoc[_index].transform.position;
@@ -51,8 +54,9 @@ namespace SlingshotScripts.AmmoTypes
             _index = 0;
             _xForceMultiplier = 60;
             _yForceMultiplier = 100;
+            GetComponent<Animator>().SetTrigger(StringKeys.SplitAnim);
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             CameraEvents.OnSetCameraMethod(splitDebris[1]);
-            gameObject.SetActive(false);
         }
         
     }
