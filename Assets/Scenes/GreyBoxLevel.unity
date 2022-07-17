@@ -3406,7 +3406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7965433632529134474, guid: a1ba60dc2043a9044a2d6412a6369977, type: 3}
       propertyPath: totalAmmo
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -7965433632529134474, guid: a1ba60dc2043a9044a2d6412a6369977, type: 3}
       propertyPath: inputHandler
@@ -13411,7 +13411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613540955370253153, guid: 49c124848d8516c45aeba9082072767f, type: 3}
       propertyPath: totalAmmo
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6613540955370253153, guid: 49c124848d8516c45aeba9082072767f, type: 3}
       propertyPath: inputHandler
@@ -13620,7 +13620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5432223764779850506, guid: 5bd1259d7a604134388add8d76a77e3f, type: 3}
       propertyPath: totalAmmo
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5432223764779850506, guid: 5bd1259d7a604134388add8d76a77e3f, type: 3}
       propertyPath: inputHandler
@@ -14024,7 +14024,7 @@ PrefabInstance:
       objectReference: {fileID: 30647700}
     - target: {fileID: 1262010244353774033, guid: 37861af64d477c142b1f1e8d1f8accfb, type: 3}
       propertyPath: totalAmmo
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1262010244353774033, guid: 37861af64d477c142b1f1e8d1f8accfb, type: 3}
       propertyPath: inputHandler

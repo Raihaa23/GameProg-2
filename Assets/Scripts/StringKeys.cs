@@ -6,12 +6,19 @@ public static class StringKeys
         public const string TestBGM = "LendMeYourVoice";
         //SFX
         public const string TestSfx = "DropletSFX",
-                            explosion = "Explosion",
-                            splitEffect = "Split Effect",
-                            slingStretch = "Slingshot Stretch",
-                            launchAmmo = "Launch Ammo";
+                            explosionSfx = "Explosion",
+                            splitEffectSfx = "Split Effect",
+                            slingStretchSfx = "Slingshot Stretch",
+                            launchAmmoSfx = "Launch Ammo";
                                             
 
         #endregion
-        
+
+        #region AnimationTriggerStrings
+        //Bomb
+        public const string ExplosionAnim = "Explosion",
+                            SplitAnim = "Split_Trigger";
+
+
+        #endregion
 }

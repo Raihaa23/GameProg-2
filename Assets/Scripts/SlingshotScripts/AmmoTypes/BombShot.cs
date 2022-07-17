@@ -30,6 +30,8 @@ namespace SlingshotScripts.AmmoTypes
 
         private void Explode() // action
         {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            GetComponent<Animator>().SetTrigger(StringKeys.ExplosionAnim);
            Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, layerToHit);
 
            foreach (var obj in objects)
@@ -40,7 +42,7 @@ namespace SlingshotScripts.AmmoTypes
                enemyScript?.Damage(ammoData.specialDamage);
            }
            MatchEvents.OnCountToEndMethod();
-           AmmoEvents.OnDestroyAmmoMethod();
+           
         }
         
         private void OnDrawGizmosSelected()

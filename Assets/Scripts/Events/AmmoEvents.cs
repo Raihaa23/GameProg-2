@@ -33,5 +33,15 @@ namespace Events
                 OnReduceAmmo();
             }
         }
+        
+        public delegate void UnfreezeConstraints();
+        public static event UnfreezeConstraints OnUnfreezeConstraints;
+        public static void OnUnfreezeConstraintsMethod()
+        {
+            if (OnUnfreezeConstraints != null)
+            {
+                OnUnfreezeConstraints();
+            }
+        }
     }
 }

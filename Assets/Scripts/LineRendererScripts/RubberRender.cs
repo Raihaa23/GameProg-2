@@ -43,6 +43,8 @@ namespace LineRendererScripts
         
         private void UpdateSlingRubberPos() //renders the slingshot line
         {
+            
+            if (_projectile == null) return;
             _line.SetPosition(0, gameObject.transform.position);
             _line.SetPosition(1, _projectile.position);
         }

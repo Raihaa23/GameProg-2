@@ -29,6 +29,10 @@ namespace SlingshotScripts
             }
             MatchEvents.OnCountToEndMethod();
         }
+        private void UnfreezeConstraints()
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        }
         private void ReduceAmmo() // reduces the ammo count in this script which will be passed on the ammo manager later
         {
             totalAmmo--;
@@ -41,6 +45,7 @@ namespace SlingshotScripts
         {
             AmmoEvents.OnDestroyAmmo += DestroyAmmo;
             AmmoEvents.OnReduceAmmo += ReduceAmmo;
+            AmmoEvents.OnUnfreezeConstraints += UnfreezeConstraints;
             playerData.canDoAction = true;
         }
 
@@ -48,6 +53,7 @@ namespace SlingshotScripts
         {
             AmmoEvents.OnDestroyAmmo -= DestroyAmmo;
             AmmoEvents.OnReduceAmmo -= ReduceAmmo;
+            AmmoEvents.OnUnfreezeConstraints -= UnfreezeConstraints;
         }
     }
 }
