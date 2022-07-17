@@ -9,7 +9,7 @@ public static class StringKeys
                             explosion = "Explosion",
                             splitEffect = "Split Effect",
                             slingStretch = "Slingshot Stretch",
-                            launchAmmo = "Laucnh Ammo";
+                            launchAmmo = "Launch Ammo";
                                             
 
         #endregion
