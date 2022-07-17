@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmAudioSource: {fileID: 3526817210013026741}
   sfxAudioSource: {fileID: 1568001222167151277}
+  ambientAudioSource: {fileID: 75185529942321143}
   bgmAudioClip:
   - {fileID: 8300000, guid: b9d4b942b1871a04fa94d1be6ecbe1d3, type: 3}
   sfxAudioClip:
@@ -57,6 +58,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9bb6d4d09d9b4134c93b8325ede53c22, type: 3}
   - {fileID: 8300000, guid: bd7a4c7777ba1704c956cf6eb672dc25, type: 3}
   - {fileID: 8300000, guid: ef477fd4da6fa61409b3c686b32d7e9c, type: 3}
+  ambientAudioClip: []
 --- !u!1 &4356237836048121759
 GameObject:
   m_ObjectHideFlags: 0
