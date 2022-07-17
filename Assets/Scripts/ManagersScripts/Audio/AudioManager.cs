@@ -26,9 +26,11 @@ namespace ManagersScripts.Audio
 
         [SerializeField] private AudioSource bgmAudioSource;
         [SerializeField] private AudioSource sfxAudioSource;
+        [SerializeField] private AudioSource ambientAudioSource;
         
         [SerializeField] private List<AudioClip> bgmAudioClip = new List<AudioClip>();
         [SerializeField] private List<AudioClip> sfxAudioClip = new List<AudioClip>();
+        [SerializeField] private List<AudioClip> ambientAudioClip = new List<AudioClip>();
 
         public void PlayBGM(int index)
         {
@@ -52,6 +54,19 @@ namespace ManagersScripts.Audio
         {
             int index = sfxAudioClip.FindIndex(i => i.name == clipName);
             sfxAudioSource.PlayOneShot(sfxAudioClip[index]);
+        }
+        
+        public void PlayAmbient(int index)
+        {
+            ambientAudioSource.clip = ambientAudioClip[index];
+            ambientAudioSource.Play();
+        }
+        
+        public void PlayAmbient(string clipName)
+        {
+            int index = ambientAudioClip.FindIndex(i => i.name == clipName);
+            ambientAudioSource.clip = bgmAudioClip[index];
+            ambientAudioSource.Play();
         }
     }
 }
