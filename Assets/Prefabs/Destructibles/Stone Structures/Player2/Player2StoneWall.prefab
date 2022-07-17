@@ -165,4 +165,4 @@ MonoBehaviour:
   destructibleData: {fileID: 11400000, guid: bfb4737fcef54584cbb6cfdee3378be5, type: 2}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   _currentHealth: 0
-  lowHealthSprite: {fileID: 259406994, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}
+  lowHealthSprite: {fileID: 586295580, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}

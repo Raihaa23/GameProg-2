@@ -1,5 +1,6 @@
 ﻿using Data.Player;
 using Events;
+using ManagersScripts.Audio;
 using TMPro;
 using UnityEngine;
 
@@ -18,11 +19,13 @@ namespace ManagersScripts.Victory
             if (player1Data.currentIntegrity <= 0)
             {
                 victoryUI.SetVictoryScreen("Player 2 Wins");
+                AudioManager.Instance.PlaySFX(StringKeys.VictorySfx);
                 Time.timeScale = 0;
             }
             else if (player2Data.currentIntegrity <= 0)
             {
                 victoryUI.SetVictoryScreen("Player 1 Wins");
+                AudioManager.Instance.PlaySFX(StringKeys.VictorySfx);
                 Time.timeScale = 0;
             }
             
@@ -54,6 +57,7 @@ namespace ManagersScripts.Victory
                         break;
                 }
             }
+            AudioManager.Instance.PlaySFX(StringKeys.VictorySfx);
             Time.timeScale = 0;
         }
         

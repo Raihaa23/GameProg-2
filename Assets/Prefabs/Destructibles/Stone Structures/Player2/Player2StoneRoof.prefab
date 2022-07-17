@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2496676263464748388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 41.95, y: -5.8173437, z: 0}
-  m_LocalScale: {x: 5.0034, y: 5.0034, z: 5.0034}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,4 +149,4 @@ MonoBehaviour:
   destructibleData: {fileID: 11400000, guid: 14fc6657e1181864884c14d596bfb197, type: 2}
   playerData: {fileID: 11400000, guid: 047d6aef6b897e94fb0ba1a047e88a3c, type: 2}
   _currentHealth: 0
-  lowHealthSprite: {fileID: 586295580, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}
+  lowHealthSprite: {fileID: 259406994, guid: 69ad47de14931bd4e88afae604e0d419, type: 3}

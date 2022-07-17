@@ -10,11 +10,6 @@ namespace ManagersScripts.Audio
         private void Start()
         {
             AudioManager.Instance.PlayIntroBGM(levelData.levelIntroBGM);
-            Invoke(nameof(PlayAmbient), AudioManager.Instance.introLength);
-        }
-
-        private void PlayAmbient()
-        {
             AudioManager.Instance.PlayAmbient(levelData.levelAmbientBGM);
         }
     }

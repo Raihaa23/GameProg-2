@@ -13,7 +13,8 @@ public static class StringKeys
                             SlingStretchSfx = "SlingshotStretch",
                             LaunchAmmoSfx = "LaunchAmmo",
                             ButtonSfx = "ButtonClick",
-                            ImpactSfx = "Impact";
+                            ImpactSfx = "Impact",
+                            VictorySfx = "WinSFX";
                                             
 
         #endregion
