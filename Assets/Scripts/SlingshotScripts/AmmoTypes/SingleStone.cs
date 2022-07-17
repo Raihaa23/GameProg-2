@@ -16,7 +16,6 @@ namespace SlingshotScripts.AmmoTypes
             if (!inputHandler.SpaceBarDown) return;
             if (PlayerTurnManager.Instance.isProjectileReleased && playerData.canDoAction)
             {
-                Debug.Log("Singlestone Action");
                 playerData.canDoAction = false;
             }
         }

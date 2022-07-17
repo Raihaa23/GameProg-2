@@ -60,7 +60,6 @@ namespace Timers
             }
             else
             {
-                Debug.Log("Turn Times Up");
                 UIEvents.OnToggleAmmoTextMethod();
                 UIEvents.OnToggleAmmoButtonMethod();
                 AmmoEvents.OnDestroyAmmoMethod();

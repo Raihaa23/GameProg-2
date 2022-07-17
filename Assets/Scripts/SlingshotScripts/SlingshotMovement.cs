@@ -28,10 +28,6 @@ namespace SlingshotScripts
    
       private void Start()
       {
-         // _line = gameObject.AddComponent<LineRenderer>();
-         // _line.SetWidth(0.05F, 0.05F);
-         // _line.SetVertexCount(2);
-         // _line.enabled = false;
          foreach (var rubber in slingRubber)
          {
             rubber.ChangeSlingRubberProjectile(gameObject.transform);
@@ -50,7 +46,6 @@ namespace SlingshotScripts
       private void Update()
       {
          HandleRaycast();
-         // LineRender();
       }
 
       public void CheckForBall() //returns the tag of the projectile
@@ -98,9 +93,7 @@ namespace SlingshotScripts
          PlayerTurnManager.Instance.isProjectileReleased = true;
          AmmoEvents.OnReduceAmmoMethod();
       }
-
-   
-   
+      
       private IEnumerator Release() //delay for projectile release
       {
          yield return new WaitForSeconds(_releaseDelay);
@@ -119,12 +112,6 @@ namespace SlingshotScripts
          _worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
          _mouseToSlingDistance = Vector2.Distance(_worldPosition, _slingRb.position);
       }
-   
-      // private void LineRender() //renders the slingshot line
-      // {
-      //    _line.SetPosition(0, _rigidB.position);
-      //    _line.SetPosition(1, _slingRb.position);
-      // }
 
       private void OnEnable()
       {
@@ -137,7 +124,6 @@ namespace SlingshotScripts
             rubber.EnableSlingRubber();
          }
       }
-
       private void OnDisable()
       {
          foreach (var rubber in slingRubber)
