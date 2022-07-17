@@ -26,9 +26,15 @@ namespace ManagersScripts.Audio
 
         [SerializeField] private AudioSource bgmAudioSource;
         [SerializeField] private AudioSource sfxAudioSource;
+        [SerializeField] private AudioSource introAudioSource;
+        [SerializeField] private AudioSource ambientAudioSource;
         
         [SerializeField] private List<AudioClip> bgmAudioClip = new List<AudioClip>();
         [SerializeField] private List<AudioClip> sfxAudioClip = new List<AudioClip>();
+        [SerializeField] private List<AudioClip> introAudioClip = new List<AudioClip>();
+        [SerializeField] private List<AudioClip> ambientAudioClip = new List<AudioClip>();
+
+        public float introLength;
 
         public void PlayBGM(int index)
         {
@@ -52,6 +58,42 @@ namespace ManagersScripts.Audio
         {
             int index = sfxAudioClip.FindIndex(i => i.name == clipName);
             sfxAudioSource.PlayOneShot(sfxAudioClip[index]);
+        }
+        
+        public void PlayIntroBGM(int index)
+        {
+            introAudioSource.clip = introAudioClip[index];
+            introAudioSource.Play();
+        }
+        
+        public void PlayIntroBGM(string clipName)
+        {
+            int index = introAudioClip.FindIndex(i => i.name == clipName);
+            introAudioSource.clip = introAudioClip[index];
+            introAudioSource.Play();
+
+            introLength = introAudioSource.clip.length;
+        }
+        
+        public void PlayAmbient(int index)
+        {
+            ambientAudioSource.clip = ambientAudioClip[index];
+            ambientAudioSource.Play();
+        }
+        
+        public void PlayAmbient(string clipName)
+        {
+            int index = ambientAudioClip.FindIndex(i => i.name == clipName);
+            ambientAudioSource.clip = ambientAudioClip[index];
+            ambientAudioSource.Play();
+        }
+        
+        public void StopAllMusic()
+        {
+            bgmAudioSource.Stop();
+            sfxAudioSource.Stop();
+            introAudioSource.Stop();
+            ambientAudioSource.Stop();
         }
     }
 }

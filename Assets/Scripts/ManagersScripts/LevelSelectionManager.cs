@@ -18,6 +18,16 @@ namespace ManagersScripts
         {
             levelData.levelChoice = levelChoice;
         }
+
+        public void IntroBGMChoice(string introBGM)
+        {
+            levelData.levelIntroBGM = introBGM;
+        }
+        
+        public void AmbientBGMChoice(string ambientBGM)
+        {
+            levelData.levelAmbientBGM = ambientBGM;
+        }
         
         public void PlayerTurnChoice(string playerName) // Starts the game with Player 1's turn 
         {

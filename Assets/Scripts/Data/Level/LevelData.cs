@@ -7,5 +7,8 @@ namespace Data.Level
     {
         public float timerChoice;
         public string levelChoice;
+
+        public string levelIntroBGM;
+        public string levelAmbientBGM;
     }
 }
