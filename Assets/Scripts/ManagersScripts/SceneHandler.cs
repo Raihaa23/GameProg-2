@@ -32,6 +32,7 @@ namespace ManagersScripts
         public void ExitGame()
         {
             Application.Quit();
+            Debug.Log("Quit Game");
         }
     }
 }

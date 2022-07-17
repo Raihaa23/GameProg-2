@@ -1084,19 +1084,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2219485860424939353, guid: 3efe77657ec97e444b3fbce52c7827a0, type: 3}
-        m_TargetAssemblyTypeName: ManagersScripts.Audio.AudioManager, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Button
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1739881299556530045, guid: 57b04f19e9d6fc944ada21167ab988a0, type: 3}
+      - m_Target: {fileID: 730220538}
         m_TargetAssemblyTypeName: ManagersScripts.SceneHandler, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
