@@ -37,10 +37,14 @@ namespace DestructibleScripts
             }
             if (_currentHealth / destructibleData.health <= 0.6f)
             {
-                if (gameObject.GetComponent<Animator>() == null) return;
-                GetComponent<Animator>().SetBool("LowHealth", true);
+                ChangeSprite();
                 
             }
+        }
+
+        protected virtual void ChangeSprite()
+        {
+            
         }
 
         private void OnCollisionEnter2D(Collision2D other) //projectile collision

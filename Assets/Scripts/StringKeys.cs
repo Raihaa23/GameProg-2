@@ -9,7 +9,8 @@ public static class StringKeys
                             ExplosionSfx = "Explosion",
                             SplitEffectSfx = "Split Effect",
                             SlingStretchSfx = "Slingshot Stretch",
-                            LaunchAmmoSfx = "Launch Ammo";
+                            LaunchAmmoSfx = "Launch Ammo",
+                            ButtonSfx = "Button";
                                             
 
         #endregion
