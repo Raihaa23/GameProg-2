@@ -6,10 +6,10 @@ public static class StringKeys
         public const string TestBGM = "LendMeYourVoice";
         //SFX
         public const string TestSfx = "DropletSFX",
-                            explosionSfx = "Explosion",
-                            splitEffectSfx = "Split Effect",
-                            slingStretchSfx = "Slingshot Stretch",
-                            launchAmmoSfx = "Launch Ammo";
+                            ExplosionSfx = "Explosion",
+                            SplitEffectSfx = "Split Effect",
+                            SlingStretchSfx = "Slingshot Stretch",
+                            LaunchAmmoSfx = "Launch Ammo";
                                             
 
         #endregion

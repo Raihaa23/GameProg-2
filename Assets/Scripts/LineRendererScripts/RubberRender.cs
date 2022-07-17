@@ -16,7 +16,6 @@ namespace LineRendererScripts
             _line.startWidth =  0.25f;
             _line.endWidth = 0.25f;
             _line.positionCount = 2;
-            // _line.material = colorMaterial;
             _line.enabled = false;
         }
 

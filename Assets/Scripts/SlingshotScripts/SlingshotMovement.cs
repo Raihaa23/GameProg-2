@@ -5,6 +5,7 @@ using Data.Player;
 using Events;
 using LineRendererScripts;
 using ManagersScripts;
+using ManagersScripts.Audio;
 using UnityEngine;
 
 namespace SlingshotScripts
@@ -59,6 +60,7 @@ namespace SlingshotScripts
          var hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
          Debug.Log(hit.collider.tag);
          if (!hit.collider.CompareTag(playerData.equippedAmmo) || !_isDraggable) return;
+         AudioManager.Instance.PlaySFX(StringKeys.SlingStretchSfx);
          _temporaryTag = "BallTag";
          _rigidB.isKinematic = true;
          CameraEvents.OnSwitchCameraPriorityMethod(1,0);
@@ -88,7 +90,7 @@ namespace SlingshotScripts
       public void CheckForBallRelease() //releases the projectile
       {
          if (_temporaryTag != "BallTag") return;
-         // _line.enabled = false;
+         AudioManager.Instance.PlaySFX(StringKeys.LaunchAmmoSfx);
          _temporaryTag = null;
          _rigidB.isKinematic = false;
          StartCoroutine(Release());

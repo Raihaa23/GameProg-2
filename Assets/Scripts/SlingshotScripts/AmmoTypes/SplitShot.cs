@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Events;
 using UnityEngine;
 using ManagersScripts;
+using ManagersScripts.Audio;
 using Unity.VisualScripting;
 
 namespace SlingshotScripts.AmmoTypes
@@ -32,6 +33,7 @@ namespace SlingshotScripts.AmmoTypes
 
         private void SplitIntoDebris() // action
         {
+            AudioManager.Instance.PlaySFX(StringKeys.SplitEffectSfx);
             GetComponent<CircleCollider2D>().enabled = false;
             foreach (var debris in splitDebris)
             {
