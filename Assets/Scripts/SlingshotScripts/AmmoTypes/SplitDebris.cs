@@ -1,8 +1,10 @@
-﻿using Data.Ammo;
+﻿using System.Collections;
+using Data.Ammo;
 using Data.Player;
 using Events;
 using Interfaces;
 using ManagersScripts;
+using ManagersScripts.Audio;
 using UnityEngine;
 
 namespace SlingshotScripts.AmmoTypes
@@ -11,8 +13,17 @@ namespace SlingshotScripts.AmmoTypes
     {
         [SerializeField] protected PlayerData playerData;
         [SerializeField] protected AmmoData ammoData;
+        private bool isRunning = false;
+        private bool canPlay = true;
         private void OnCollisionEnter2D(Collision2D other) //projectile collision
         {
+            if (canPlay)
+            {
+                AudioManager.Instance.PlaySFX(StringKeys.SplitDebrisSfx);
+                canPlay = false;
+                StartCoroutine(SFXIntervalRate());
+            }
+            
             if (other.gameObject.CompareTag(playerData.enemyDestructible))
             {
                 var impactForce = other.relativeVelocity.magnitude;
@@ -21,6 +32,17 @@ namespace SlingshotScripts.AmmoTypes
                 enemyScript?.Damage(Mathf.Round(ammoData.damageMultiplier * impactForce));
             }
             MatchEvents.OnCountToEndMethod();
+        }
+        
+        private IEnumerator SFXIntervalRate()
+        {
+            if (!isRunning)
+            {
+                isRunning = true;
+                yield return new WaitForSeconds(0.5f);
+                canPlay = true;
+                isRunning = false;
+            }
         }
         
         private void DestroyAmmo() //destroys projectile 

@@ -7,5 +7,6 @@ namespace Data.Destructibles
     {
         public float health = 50;
         public float damageMultiplier;
+        public string npcType;
     }
 }

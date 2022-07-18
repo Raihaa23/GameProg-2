@@ -8,14 +8,15 @@ public static class StringKeys
         
         //SFX
         public const string TestSfx = "DropletSFX",
-                            ExplosionSfx = "Explosion",
-                            SplitEffectSfx = "SplitEffect",
-                            SlingStretchSfx = "SlingshotStretch",
-                            LaunchAmmoSfx = "LaunchAmmo",
-                            ButtonSfx = "ButtonClick",
-                            ImpactSfx = "Impact",
-                            VictorySfx = "WinSFX";
-                                            
+            ExplosionSfx = "Explosion",
+            SplitEffectSfx = "SplitEffect",
+            SlingStretchSfx = "SlingshotStretch",
+            LaunchAmmoSfx = "LaunchAmmo",
+            ButtonSfx = "ButtonClick",
+            ImpactSfx = "Impact",
+            VictorySfx = "WinSFX",
+            SplitDebrisSfx = "SplitDebrisSFX";
+
 
         #endregion
 

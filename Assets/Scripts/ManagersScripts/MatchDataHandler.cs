@@ -17,11 +17,13 @@ namespace ManagersScripts
             player1Data.equippedAmmo = null;
             player1Data.totalIntegrity = 0;
             player1Data.canDoAction = true;
+            player1Data.isKingDead = false;
 
             player2Data.currentIntegrity = 0;
             player2Data.equippedAmmo = null;
             player2Data.totalIntegrity = 0;
             player2Data.canDoAction = true;
+            player2Data.isKingDead = false;
         }
         
         private void OnEnable()

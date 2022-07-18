@@ -14,6 +14,7 @@ namespace Data.Player
         public float currentIntegrity;
         
         public bool canDoAction;
+        public bool isKingDead = false;
 
     }
 }

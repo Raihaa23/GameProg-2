@@ -28,6 +28,21 @@ namespace ManagersScripts.Victory
                 AudioManager.Instance.PlaySFX(StringKeys.VictorySfx);
                 Time.timeScale = 0;
             }
+
+            if (player1Data.isKingDead == true)
+            {
+                victoryUI.SetVictoryScreen("Player 2 Wins");
+                AudioManager.Instance.PlaySFX(StringKeys.VictorySfx);
+                Time.timeScale = 0;
+            }
+
+            else if (player2Data.isKingDead == true)
+            {
+                victoryUI.SetVictoryScreen("Player 1 Wins");
+                AudioManager.Instance.PlaySFX(StringKeys.VictorySfx);
+                Time.timeScale = 0;
+            }
+            
             
         }
 

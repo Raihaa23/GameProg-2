@@ -33,12 +33,15 @@ namespace DestructibleScripts
             DestructibleEvents.OnCalculateHpMethod();
             if (_currentHealth <= 0)
             {
+                if (destructibleData.npcType == "King")
+                {
+                    playerData.isKingDead = true;
+                }
                 gameObject.SetActive(false);
             }
             if (_currentHealth / destructibleData.health <= 0.6f)
             {
                 ChangeSprite();
-                
             }
         }
 
